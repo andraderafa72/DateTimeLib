@@ -9,7 +9,8 @@ using namespace std;
 class DateTime
 {
 private:
-  int days_per_month[2][13];
+  int days_per_month[2][13] = {{0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31},
+                               {0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}};
   string CompareThisDate(DateTime dt);
   void ValidateTime(int d, int m, int y, int h, int min, int s);
   int isLeapYear(int year);
@@ -35,7 +36,7 @@ public:
   /* COMPARISONS */
   bool isAfter(DateTime dt);
   bool isEqual(DateTime dt);
-  DateTime Compare(DateTime another_time, string output = "D");
+  DateTime Compare(DateTime another_time, string output);
 
   /* CONVERSIONS */
   string ToString();
