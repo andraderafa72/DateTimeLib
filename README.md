@@ -24,5 +24,30 @@ A documentação completa do projeto está disponível nas seguintes fontes:
 ## Requisitos
 - C++11 ou superior
 
-## Compilação
-Para compilar o projeto, utilize um compilador C++ compatível com C++11 ou superior.
+## Uso
+Inclua os arquivos `DateTime.cpp` e `DateTime.h` em seu projeto e referencie o `DateTime.cpp` em seu processo de compilação.
+
+### Exemplo com `cmake`:
+
+#### Arquivo `CMakeLists.txt`:
+
+```cmake
+add_executable(DateTimeLib
+    "DateTime.cpp"
+    # Arquivos do seu projeto
+    "main.cpp"
+)
+``` 
+
+#### Utilização:
+
+```c++
+#include "path/to/DateTime.h"
+
+/// ...
+
+DateTime create_date() {
+  return DateTime(2024, 10, 23); // 23/10/2024 00:00:00
+}
+```
+

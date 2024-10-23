@@ -36,9 +36,15 @@ std::cout << "Nova data: " << dt1.to_string() << std::endl;
 ## Documentação
 
 <a href="constructors.md">Construtores</a>
+
 <a href="comparacoes.md">Comparações</a>
+
 <a href="acessos.md">Acessos</a>
+
 <a href="soma.md">Somas</a>
+
 <a href="sub.md">Subtrações</a>
+
 <a href="conversoes.md">Conversões</a>
+
 <a href="operadores.md">Operadores</a>
