@@ -25,7 +25,9 @@ A documentação completa do projeto está disponível nas seguintes fontes:
 - C++11 ou superior
 
 ## Uso
-Inclua os arquivos `DateTime.cpp` e `DateTime.h` em seu projeto e referencie o `DateTime.cpp` em seu processo de compilação.
+
+
+Inclua os arquivos `DateTime.cpp` e `DateTime.h` da pasta [source](https://github.com/andraderafa72/DateTimeLib/tree/main/source) em seu projeto e referencie o `DateTime.cpp` em seu processo de compilação.
 
 ### Exemplo com `cmake`:
 

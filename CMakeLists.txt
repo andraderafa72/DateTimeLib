@@ -17,7 +17,7 @@ set( CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} ${GCC_COMPILE_FLAGS} ${PREPROCESSING_F
 #Include dir
 # include_directories( lib )
 add_executable(DateTimeLib
-    "DateTime.cpp"
+    "source/DateTime.cpp" 
     "main.cpp"
 )
 
