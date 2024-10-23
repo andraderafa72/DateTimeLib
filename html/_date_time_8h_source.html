@@ -1,0 +1,257 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.12.0"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>DateTime Lib: Código-Fonte de DateTime.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">DateTime Lib
+   </div>
+   <div id="projectbrief">Classe para representar e manipular datas e horários.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.12.0 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Busca',false);
+  $(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Carregando...</div>
+<div class="SRStatus" id="Searching">Procurando...</div>
+<div class="SRStatus" id="NoMatches">Nenhuma entrada encontrado</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">DateTime.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="_date_time_8h.html">Ir para a documentação desse arquivo.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#ifndef DATETIME</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#define DATETIME</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">using namespace </span>std;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="};">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="class_date_time.html">   23</a></span><span class="keyword">class </span><a class="code hl_class" href="class_date_time.html">DateTime</a> {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keywordtype">int</span> days_per_month[2][13] = {{0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31},</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>                                 {0, 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31}};</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keywordtype">string</span> CompareThisDate(<a class="code hl_class" href="class_date_time.html">DateTime</a> dt);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">void</span> ValidateTime(<span class="keywordtype">int</span> d, <span class="keywordtype">int</span> m, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> h, <span class="keywordtype">int</span> min, <span class="keywordtype">int</span> s);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordtype">int</span> MonthFromDays(<span class="keywordtype">int</span> days, <span class="keywordtype">int</span> currentYear);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">int</span> GetDateByDays(<span class="keywordtype">int</span> days, <span class="keywordtype">int</span> currentYear);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span> </div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    <span class="keywordtype">int</span> isLeapYear(<span class="keywordtype">int</span> <a class="code hl_variable" href="class_date_time.html#a2321f5c6c78e5dda630c18e2cbae28dd">year</a>) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno"><a class="line" href="class_date_time.html#af608557420dd510badb778d0d2d4b1b9">   70</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="class_date_time.html#af608557420dd510badb778d0d2d4b1b9">day</a>,       </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno"><a class="line" href="class_date_time.html#a2233ee6732933c7a99fcc22802d680cc">   71</a></span>        <a class="code hl_variable" href="class_date_time.html#a2233ee6732933c7a99fcc22802d680cc">month</a>,     </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno"><a class="line" href="class_date_time.html#a2321f5c6c78e5dda630c18e2cbae28dd">   72</a></span>        <a class="code hl_variable" href="class_date_time.html#a2321f5c6c78e5dda630c18e2cbae28dd">year</a>,      </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno"><a class="line" href="class_date_time.html#af649e5d8fadf681c83b40fdb784879dc">   73</a></span>        <a class="code hl_variable" href="class_date_time.html#af649e5d8fadf681c83b40fdb784879dc">hours</a>,     </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno"><a class="line" href="class_date_time.html#a1427d705ebab4979490a6267a4d4ab67">   74</a></span>        <a class="code hl_variable" href="class_date_time.html#a1427d705ebab4979490a6267a4d4ab67">minutes</a>,   </div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="class_date_time.html#a175e20246155f717a341882a0da2de94">   75</a></span>        <a class="code hl_variable" href="class_date_time.html#a175e20246155f717a341882a0da2de94">timestamp</a>, </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno"><a class="line" href="class_date_time.html#a0b36196a591d08b2512b02f7058560ee">   76</a></span>        <a class="code hl_variable" href="class_date_time.html#a0b36196a591d08b2512b02f7058560ee">seconds</a>;   </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="comment">/* CONSTRUCTORS */</span></div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    </div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <a class="code hl_function" href="class_date_time.html#a3ccfb87f7a2e9683b91964e32d907161">DateTime</a>();</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span> </div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <a class="code hl_function" href="class_date_time.html#a3ccfb87f7a2e9683b91964e32d907161">DateTime</a>(<span class="keywordtype">int</span> d, <span class="keywordtype">int</span> m, <span class="keywordtype">int</span> y);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <a class="code hl_function" href="class_date_time.html#a3ccfb87f7a2e9683b91964e32d907161">DateTime</a>(<span class="keywordtype">int</span> d, <span class="keywordtype">int</span> m, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> h);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <a class="code hl_function" href="class_date_time.html#a3ccfb87f7a2e9683b91964e32d907161">DateTime</a>(<span class="keywordtype">int</span> d, <span class="keywordtype">int</span> m, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> h, <span class="keywordtype">int</span> min);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>    <a class="code hl_function" href="class_date_time.html#a3ccfb87f7a2e9683b91964e32d907161">DateTime</a>(<span class="keywordtype">int</span> d, <span class="keywordtype">int</span> m, <span class="keywordtype">int</span> y, <span class="keywordtype">int</span> h, <span class="keywordtype">int</span> min, <span class="keywordtype">int</span> s, <span class="keywordtype">int</span> ts);</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span> </div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>    <span class="comment">/* COMPARISONS */</span></div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_date_time.html#a4335cc58f26c7acfe9cc05ffa9304473">isAfter</a>(<a class="code hl_class" href="class_date_time.html">DateTime</a> dt);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
+<div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_date_time.html#aa5201d5fefb417c52e9dea3d6e4fd529">isEqual</a>(<a class="code hl_class" href="class_date_time.html">DateTime</a> dt);</div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="class_date_time.html#a768e5e06de2e8717cd8151597ce34632">isBefore</a>(<a class="code hl_class" href="class_date_time.html">DateTime</a> dt);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="comment">/* CONVERSIONS */</span></div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span> </div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_date_time.html#a40053e072c619a03bfb99337fdf697b2">ToString</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    <span class="keywordtype">string</span> <a class="code hl_function" href="class_date_time.html#a6ada9b441d558b7c4ec40aaf7d4e02c9">ToISOString</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    <a class="code hl_class" href="class_date_time.html">DateTime</a> <a class="code hl_function" href="class_date_time.html#a459e62657b6f591a5b74c43bc639deff">toUTC</a>();</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_date_time.html#a90f87353a7be05d5c1a48890f785b386">ChangeTimeStamp</a>(<span class="keywordtype">int</span> ts);</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span> </div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <span class="comment">/* DATE OPERATIONS */</span></div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_date_time.html#a107c94313d5992b4dbc548b017b65180">SumSeconds</a>(<span class="keywordtype">int</span> s);</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_date_time.html#ab48809d4b3c97ba7942cb981a9225e19">SumMinutes</a>(<span class="keywordtype">int</span> min);</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span> </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_date_time.html#a41821eff4df5ecee604efeff1b987093">SumHours</a>(<span class="keywordtype">int</span> h);</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span> </div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_date_time.html#a892383e6a0a5a6bdfa30d21cca9a79b2">SumDays</a>(<span class="keywordtype">int</span> d);</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span> </div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_date_time.html#a3a1dca6b1eaabbb598947e5b19378be5">SumMonths</a>(<span class="keywordtype">int</span> m);</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span> </div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_date_time.html#aa5c12be3016087678a0388ef3bea197a">SumYears</a>(<span class="keywordtype">int</span> y);</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>    <span class="comment">/* SUBTRACTIONS */</span></div>
+<div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span> </div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_date_time.html#a2569863cb7ebd2c2c798bd285cebbcc5">SubtractSeconds</a>(<span class="keywordtype">int</span> s);</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span> </div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_date_time.html#a4cbde30313f26a72e09de5268b1282eb">SubtractMinutes</a>(<span class="keywordtype">int</span> min);</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span> </div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_date_time.html#abd6ab83b6a660ed518e43dc2784b6b39">SubtractHours</a>(<span class="keywordtype">int</span> h);</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_date_time.html#aecd98d6ac79c166d806cd4cc317acc42">SubtractDays</a>(<span class="keywordtype">int</span> d);</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span> </div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_date_time.html#afb5451110ab0cb4ed63c741666a1d21e">SubtractMonths</a>(<span class="keywordtype">int</span> m);</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span> </div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="class_date_time.html#abe5a9327e5054b7da262e78ec274b685">SubtractYears</a>(<span class="keywordtype">int</span> y);</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span> </div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>    <span class="comment">/* ANOTHER METHODS */</span></div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_date_time.html#af7b66959f312ebf7b2240fa9998e9b11">GetFullYear</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span> </div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_date_time.html#a5c592250b3cfea8314e39d6ceb55dda6">GetMonth</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span> </div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_date_time.html#a382848cb6b421e55965bcc920e58fa7c">GetDate</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00268" name="l00268"></a><span class="lineno">  268</span> </div>
+<div class="line"><a id="l00273" name="l00273"></a><span class="lineno">  273</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_date_time.html#a41d291fce2b2fda02f5ceb5d977c5597">GetHours</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00274" name="l00274"></a><span class="lineno">  274</span> </div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_date_time.html#afc2a7ff42954c3ac760d578c9dc43b4c">GetMinutes</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span> </div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_date_time.html#a95d0158a08b084f468fd31108a43d1d7">GetSeconds</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span> </div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="class_date_time.html#af8f201eb3f584b9d345c30095732e642">GetDayOfTheYear</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span> </div>
+<div class="foldopen" id="foldopen00299" data-start="{" data-end="};">
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno"><a class="line" href="class_date_time.html#a349e8dda083ae7cbf8f1dc355799b9c2">  299</a></span>    <span class="keyword">friend</span> std::ostream&amp; <a class="code hl_friend" href="class_date_time.html#a349e8dda083ae7cbf8f1dc355799b9c2">operator&lt;&lt;</a>(std::ostream&amp; os, <span class="keyword">const</span> <a class="code hl_class" href="class_date_time.html">DateTime</a>&amp; date) {</div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>        os &lt;&lt; date.<a class="code hl_function" href="class_date_time.html#a40053e072c619a03bfb99337fdf697b2">ToString</a>();</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>        <span class="keywordflow">return</span> os;</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>    }</div>
+</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>};</div>
+</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span> </div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_date_time_html"><div class="ttname"><a href="class_date_time.html">DateTime</a></div><div class="ttdoc">Classe para representar e manipular datas e horários.</div><div class="ttdef"><b>Definição</b> DateTime.h:23</div></div>
+<div class="ttc" id="aclass_date_time_html_a0b36196a591d08b2512b02f7058560ee"><div class="ttname"><a href="class_date_time.html#a0b36196a591d08b2512b02f7058560ee">DateTime::seconds</a></div><div class="ttdeci">int seconds</div><div class="ttdoc">Segundos.</div><div class="ttdef"><b>Definição</b> DateTime.h:76</div></div>
+<div class="ttc" id="aclass_date_time_html_a107c94313d5992b4dbc548b017b65180"><div class="ttname"><a href="class_date_time.html#a107c94313d5992b4dbc548b017b65180">DateTime::SumSeconds</a></div><div class="ttdeci">void SumSeconds(int s)</div><div class="ttdoc">Soma segundos à data.</div><div class="ttdef"><b>Definição</b> DateTime.cpp:186</div></div>
+<div class="ttc" id="aclass_date_time_html_a1427d705ebab4979490a6267a4d4ab67"><div class="ttname"><a href="class_date_time.html#a1427d705ebab4979490a6267a4d4ab67">DateTime::minutes</a></div><div class="ttdeci">int minutes</div><div class="ttdoc">Minutos.</div><div class="ttdef"><b>Definição</b> DateTime.h:74</div></div>
+<div class="ttc" id="aclass_date_time_html_a175e20246155f717a341882a0da2de94"><div class="ttname"><a href="class_date_time.html#a175e20246155f717a341882a0da2de94">DateTime::timestamp</a></div><div class="ttdeci">int timestamp</div><div class="ttdoc">Timestamp (opcional).</div><div class="ttdef"><b>Definição</b> DateTime.h:75</div></div>
+<div class="ttc" id="aclass_date_time_html_a2233ee6732933c7a99fcc22802d680cc"><div class="ttname"><a href="class_date_time.html#a2233ee6732933c7a99fcc22802d680cc">DateTime::month</a></div><div class="ttdeci">int month</div><div class="ttdoc">Mês do ano.</div><div class="ttdef"><b>Definição</b> DateTime.h:71</div></div>
+<div class="ttc" id="aclass_date_time_html_a2321f5c6c78e5dda630c18e2cbae28dd"><div class="ttname"><a href="class_date_time.html#a2321f5c6c78e5dda630c18e2cbae28dd">DateTime::year</a></div><div class="ttdeci">int year</div><div class="ttdoc">Ano.</div><div class="ttdef"><b>Definição</b> DateTime.h:72</div></div>
+<div class="ttc" id="aclass_date_time_html_a2569863cb7ebd2c2c798bd285cebbcc5"><div class="ttname"><a href="class_date_time.html#a2569863cb7ebd2c2c798bd285cebbcc5">DateTime::SubtractSeconds</a></div><div class="ttdeci">void SubtractSeconds(int s)</div><div class="ttdoc">Subtrai segundos da data.</div><div class="ttdef"><b>Definição</b> DateTime.cpp:258</div></div>
+<div class="ttc" id="aclass_date_time_html_a349e8dda083ae7cbf8f1dc355799b9c2"><div class="ttname"><a href="class_date_time.html#a349e8dda083ae7cbf8f1dc355799b9c2">DateTime::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;os, const DateTime &amp;date)</div><div class="ttdoc">Sobrecarga do operador de inserção (&lt;&lt;) para imprimir a data.</div><div class="ttdef"><b>Definição</b> DateTime.h:299</div></div>
+<div class="ttc" id="aclass_date_time_html_a382848cb6b421e55965bcc920e58fa7c"><div class="ttname"><a href="class_date_time.html#a382848cb6b421e55965bcc920e58fa7c">DateTime::GetDate</a></div><div class="ttdeci">int GetDate() const</div><div class="ttdoc">Obtém o dia da data.</div><div class="ttdef"><b>Definição</b> DateTime.cpp:336</div></div>
+<div class="ttc" id="aclass_date_time_html_a3a1dca6b1eaabbb598947e5b19378be5"><div class="ttname"><a href="class_date_time.html#a3a1dca6b1eaabbb598947e5b19378be5">DateTime::SumMonths</a></div><div class="ttdeci">void SumMonths(int m)</div><div class="ttdoc">Soma meses à data.</div><div class="ttdef"><b>Definição</b> DateTime.cpp:235</div></div>
+<div class="ttc" id="aclass_date_time_html_a3ccfb87f7a2e9683b91964e32d907161"><div class="ttname"><a href="class_date_time.html#a3ccfb87f7a2e9683b91964e32d907161">DateTime::DateTime</a></div><div class="ttdeci">DateTime()</div><div class="ttdoc">Construtor padrão.</div><div class="ttdef"><b>Definição</b> DateTime.cpp:117</div></div>
+<div class="ttc" id="aclass_date_time_html_a40053e072c619a03bfb99337fdf697b2"><div class="ttname"><a href="class_date_time.html#a40053e072c619a03bfb99337fdf697b2">DateTime::ToString</a></div><div class="ttdeci">string ToString() const</div><div class="ttdoc">Converte a data para string.</div><div class="ttdef"><b>Definição</b> DateTime.cpp:357</div></div>
+<div class="ttc" id="aclass_date_time_html_a41821eff4df5ecee604efeff1b987093"><div class="ttname"><a href="class_date_time.html#a41821eff4df5ecee604efeff1b987093">DateTime::SumHours</a></div><div class="ttdeci">void SumHours(int h)</div><div class="ttdoc">Soma horas à data.</div><div class="ttdef"><b>Definição</b> DateTime.cpp:210</div></div>
+<div class="ttc" id="aclass_date_time_html_a41d291fce2b2fda02f5ceb5d977c5597"><div class="ttname"><a href="class_date_time.html#a41d291fce2b2fda02f5ceb5d977c5597">DateTime::GetHours</a></div><div class="ttdeci">int GetHours() const</div><div class="ttdoc">Obtém as horas da data.</div><div class="ttdef"><b>Definição</b> DateTime.cpp:337</div></div>
+<div class="ttc" id="aclass_date_time_html_a4335cc58f26c7acfe9cc05ffa9304473"><div class="ttname"><a href="class_date_time.html#a4335cc58f26c7acfe9cc05ffa9304473">DateTime::isAfter</a></div><div class="ttdeci">bool isAfter(DateTime dt)</div><div class="ttdoc">Verifica se a data atual é posterior a outra data.</div><div class="ttdef"><b>Definição</b> DateTime.cpp:172</div></div>
+<div class="ttc" id="aclass_date_time_html_a459e62657b6f591a5b74c43bc639deff"><div class="ttname"><a href="class_date_time.html#a459e62657b6f591a5b74c43bc639deff">DateTime::toUTC</a></div><div class="ttdeci">DateTime toUTC()</div><div class="ttdoc">Converte a data para UTC.</div><div class="ttdef"><b>Definição</b> DateTime.cpp:415</div></div>
+<div class="ttc" id="aclass_date_time_html_a4cbde30313f26a72e09de5268b1282eb"><div class="ttname"><a href="class_date_time.html#a4cbde30313f26a72e09de5268b1282eb">DateTime::SubtractMinutes</a></div><div class="ttdeci">void SubtractMinutes(int min)</div><div class="ttdoc">Subtrai minutos da data.</div><div class="ttdef"><b>Definição</b> DateTime.cpp:270</div></div>
+<div class="ttc" id="aclass_date_time_html_a5c592250b3cfea8314e39d6ceb55dda6"><div class="ttname"><a href="class_date_time.html#a5c592250b3cfea8314e39d6ceb55dda6">DateTime::GetMonth</a></div><div class="ttdeci">int GetMonth() const</div><div class="ttdoc">Obtém o mês da data.</div><div class="ttdef"><b>Definição</b> DateTime.cpp:335</div></div>
+<div class="ttc" id="aclass_date_time_html_a6ada9b441d558b7c4ec40aaf7d4e02c9"><div class="ttname"><a href="class_date_time.html#a6ada9b441d558b7c4ec40aaf7d4e02c9">DateTime::ToISOString</a></div><div class="ttdeci">string ToISOString() const</div><div class="ttdoc">Converte a data para o formato ISO.</div><div class="ttdef"><b>Definição</b> DateTime.cpp:386</div></div>
+<div class="ttc" id="aclass_date_time_html_a768e5e06de2e8717cd8151597ce34632"><div class="ttname"><a href="class_date_time.html#a768e5e06de2e8717cd8151597ce34632">DateTime::isBefore</a></div><div class="ttdeci">bool isBefore(DateTime dt)</div><div class="ttdoc">Verifica se a data atual é anterior a outra data.</div><div class="ttdef"><b>Definição</b> DateTime.cpp:167</div></div>
+<div class="ttc" id="aclass_date_time_html_a892383e6a0a5a6bdfa30d21cca9a79b2"><div class="ttname"><a href="class_date_time.html#a892383e6a0a5a6bdfa30d21cca9a79b2">DateTime::SumDays</a></div><div class="ttdeci">void SumDays(int d)</div><div class="ttdoc">Soma dias à data.</div><div class="ttdef"><b>Definição</b> DateTime.cpp:222</div></div>
+<div class="ttc" id="aclass_date_time_html_a90f87353a7be05d5c1a48890f785b386"><div class="ttname"><a href="class_date_time.html#a90f87353a7be05d5c1a48890f785b386">DateTime::ChangeTimeStamp</a></div><div class="ttdeci">void ChangeTimeStamp(int ts)</div><div class="ttdoc">Altera o timestamp da data.</div><div class="ttdef"><b>Definição</b> DateTime.cpp:423</div></div>
+<div class="ttc" id="aclass_date_time_html_a95d0158a08b084f468fd31108a43d1d7"><div class="ttname"><a href="class_date_time.html#a95d0158a08b084f468fd31108a43d1d7">DateTime::GetSeconds</a></div><div class="ttdeci">int GetSeconds() const</div><div class="ttdoc">Obtém os segundos da data.</div><div class="ttdef"><b>Definição</b> DateTime.cpp:339</div></div>
+<div class="ttc" id="aclass_date_time_html_aa5201d5fefb417c52e9dea3d6e4fd529"><div class="ttname"><a href="class_date_time.html#aa5201d5fefb417c52e9dea3d6e4fd529">DateTime::isEqual</a></div><div class="ttdeci">bool isEqual(DateTime dt)</div><div class="ttdoc">Verifica se a data atual é igual a outra data.</div><div class="ttdef"><b>Definição</b> DateTime.cpp:177</div></div>
+<div class="ttc" id="aclass_date_time_html_aa5c12be3016087678a0388ef3bea197a"><div class="ttname"><a href="class_date_time.html#aa5c12be3016087678a0388ef3bea197a">DateTime::SumYears</a></div><div class="ttdeci">void SumYears(int y)</div><div class="ttdoc">Soma anos à data.</div><div class="ttdef"><b>Definição</b> DateTime.cpp:248</div></div>
+<div class="ttc" id="aclass_date_time_html_ab48809d4b3c97ba7942cb981a9225e19"><div class="ttname"><a href="class_date_time.html#ab48809d4b3c97ba7942cb981a9225e19">DateTime::SumMinutes</a></div><div class="ttdeci">void SumMinutes(int min)</div><div class="ttdoc">Soma minutos à data.</div><div class="ttdef"><b>Definição</b> DateTime.cpp:198</div></div>
+<div class="ttc" id="aclass_date_time_html_abd6ab83b6a660ed518e43dc2784b6b39"><div class="ttname"><a href="class_date_time.html#abd6ab83b6a660ed518e43dc2784b6b39">DateTime::SubtractHours</a></div><div class="ttdeci">void SubtractHours(int h)</div><div class="ttdoc">Subtrai horas da data.</div><div class="ttdef"><b>Definição</b> DateTime.cpp:282</div></div>
+<div class="ttc" id="aclass_date_time_html_abe5a9327e5054b7da262e78ec274b685"><div class="ttname"><a href="class_date_time.html#abe5a9327e5054b7da262e78ec274b685">DateTime::SubtractYears</a></div><div class="ttdeci">void SubtractYears(int y)</div><div class="ttdoc">Subtrai anos da data.</div><div class="ttdef"><b>Definição</b> DateTime.cpp:320</div></div>
+<div class="ttc" id="aclass_date_time_html_aecd98d6ac79c166d806cd4cc317acc42"><div class="ttname"><a href="class_date_time.html#aecd98d6ac79c166d806cd4cc317acc42">DateTime::SubtractDays</a></div><div class="ttdeci">void SubtractDays(int d)</div><div class="ttdoc">Subtrai dias da data.</div><div class="ttdef"><b>Definição</b> DateTime.cpp:294</div></div>
+<div class="ttc" id="aclass_date_time_html_af608557420dd510badb778d0d2d4b1b9"><div class="ttname"><a href="class_date_time.html#af608557420dd510badb778d0d2d4b1b9">DateTime::day</a></div><div class="ttdeci">int day</div><div class="ttdoc">Dia do mês.</div><div class="ttdef"><b>Definição</b> DateTime.h:70</div></div>
+<div class="ttc" id="aclass_date_time_html_af649e5d8fadf681c83b40fdb784879dc"><div class="ttname"><a href="class_date_time.html#af649e5d8fadf681c83b40fdb784879dc">DateTime::hours</a></div><div class="ttdeci">int hours</div><div class="ttdoc">Hora do dia.</div><div class="ttdef"><b>Definição</b> DateTime.h:73</div></div>
+<div class="ttc" id="aclass_date_time_html_af7b66959f312ebf7b2240fa9998e9b11"><div class="ttname"><a href="class_date_time.html#af7b66959f312ebf7b2240fa9998e9b11">DateTime::GetFullYear</a></div><div class="ttdeci">int GetFullYear() const</div><div class="ttdoc">Obtém o ano completo da data.</div><div class="ttdef"><b>Definição</b> DateTime.cpp:334</div></div>
+<div class="ttc" id="aclass_date_time_html_af8f201eb3f584b9d345c30095732e642"><div class="ttname"><a href="class_date_time.html#af8f201eb3f584b9d345c30095732e642">DateTime::GetDayOfTheYear</a></div><div class="ttdeci">int GetDayOfTheYear() const</div><div class="ttdoc">Obtém o dia do ano.</div><div class="ttdef"><b>Definição</b> DateTime.cpp:340</div></div>
+<div class="ttc" id="aclass_date_time_html_afb5451110ab0cb4ed63c741666a1d21e"><div class="ttname"><a href="class_date_time.html#afb5451110ab0cb4ed63c741666a1d21e">DateTime::SubtractMonths</a></div><div class="ttdeci">void SubtractMonths(int m)</div><div class="ttdoc">Subtrai meses da data.</div><div class="ttdef"><b>Definição</b> DateTime.cpp:307</div></div>
+<div class="ttc" id="aclass_date_time_html_afc2a7ff42954c3ac760d578c9dc43b4c"><div class="ttname"><a href="class_date_time.html#afc2a7ff42954c3ac760d578c9dc43b4c">DateTime::GetMinutes</a></div><div class="ttdeci">int GetMinutes() const</div><div class="ttdoc">Obtém os minutos da data.</div><div class="ttdef"><b>Definição</b> DateTime.cpp:338</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.12.0
+</small></address>
+</div><!-- doc-content -->
+</body>
+</html>

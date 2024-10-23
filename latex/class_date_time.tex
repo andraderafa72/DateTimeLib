@@ -1,0 +1,613 @@
+\doxysection{Referência da Classe Date\+Time}
+\hypertarget{class_date_time}{}\label{class_date_time}\index{DateTime@{DateTime}}
+
+
+Classe para representar e manipular datas e horários.  
+
+
+
+
+{\ttfamily \#include $<$Date\+Time.\+h$>$}
+
+\doxysubsubsection*{Membros Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_date_time_a3ccfb87f7a2e9683b91964e32d907161}\label{class_date_time_a3ccfb87f7a2e9683b91964e32d907161} 
+{\bfseries Date\+Time} ()
+\begin{DoxyCompactList}\small\item\em Construtor padrão. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_date_time_a3f047959b60ca93f2b9b633e888172e6}{Date\+Time}} (int d, int m, int y)
+\begin{DoxyCompactList}\small\item\em Construtor com dia, mês e ano. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_date_time_aa08f8e2e2abe0f5f63580454dce65753}{Date\+Time}} (int d, int m, int y, int h)
+\begin{DoxyCompactList}\small\item\em Construtor com dia, mês, ano e horas. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_date_time_aed9a31d99f14363397f2105bfff24d45}{Date\+Time}} (int d, int m, int y, int h, int min)
+\begin{DoxyCompactList}\small\item\em Construtor com dia, mês, ano, horas e minutos. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_date_time_aa409e6a9501f5f276bf8156d1b103aef}{Date\+Time}} (int d, int m, int y, int h, int min, int s, int ts)
+\begin{DoxyCompactList}\small\item\em Construtor completo com todos os parâmetros. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_date_time_a4335cc58f26c7acfe9cc05ffa9304473}{is\+After}} (\mbox{\hyperlink{class_date_time}{Date\+Time}} dt)
+\begin{DoxyCompactList}\small\item\em Verifica se a data atual é posterior a outra data. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_date_time_aa5201d5fefb417c52e9dea3d6e4fd529}{is\+Equal}} (\mbox{\hyperlink{class_date_time}{Date\+Time}} dt)
+\begin{DoxyCompactList}\small\item\em Verifica se a data atual é igual a outra data. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_date_time_a768e5e06de2e8717cd8151597ce34632}{is\+Before}} (\mbox{\hyperlink{class_date_time}{Date\+Time}} dt)
+\begin{DoxyCompactList}\small\item\em Verifica se a data atual é anterior a outra data. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_date_time_a40053e072c619a03bfb99337fdf697b2}{To\+String}} () const
+\begin{DoxyCompactList}\small\item\em Converte a data para string. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_date_time_a6ada9b441d558b7c4ec40aaf7d4e02c9}{To\+ISOString}} () const
+\begin{DoxyCompactList}\small\item\em Converte a data para o formato ISO. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_date_time}{Date\+Time}} \mbox{\hyperlink{class_date_time_a459e62657b6f591a5b74c43bc639deff}{to\+UTC}} ()
+\begin{DoxyCompactList}\small\item\em Converte a data para UTC. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_date_time_a90f87353a7be05d5c1a48890f785b386}{Change\+Time\+Stamp}} (int ts)
+\begin{DoxyCompactList}\small\item\em Altera o timestamp da data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_date_time_a107c94313d5992b4dbc548b017b65180}{Sum\+Seconds}} (int s)
+\begin{DoxyCompactList}\small\item\em Soma segundos à data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_date_time_ab48809d4b3c97ba7942cb981a9225e19}{Sum\+Minutes}} (int min)
+\begin{DoxyCompactList}\small\item\em Soma minutos à data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_date_time_a41821eff4df5ecee604efeff1b987093}{Sum\+Hours}} (int h)
+\begin{DoxyCompactList}\small\item\em Soma horas à data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_date_time_a892383e6a0a5a6bdfa30d21cca9a79b2}{Sum\+Days}} (int d)
+\begin{DoxyCompactList}\small\item\em Soma dias à data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_date_time_a3a1dca6b1eaabbb598947e5b19378be5}{Sum\+Months}} (int m)
+\begin{DoxyCompactList}\small\item\em Soma meses à data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_date_time_aa5c12be3016087678a0388ef3bea197a}{Sum\+Years}} (int y)
+\begin{DoxyCompactList}\small\item\em Soma anos à data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_date_time_a2569863cb7ebd2c2c798bd285cebbcc5}{Subtract\+Seconds}} (int s)
+\begin{DoxyCompactList}\small\item\em Subtrai segundos da data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_date_time_a4cbde30313f26a72e09de5268b1282eb}{Subtract\+Minutes}} (int min)
+\begin{DoxyCompactList}\small\item\em Subtrai minutos da data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_date_time_abd6ab83b6a660ed518e43dc2784b6b39}{Subtract\+Hours}} (int h)
+\begin{DoxyCompactList}\small\item\em Subtrai horas da data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_date_time_aecd98d6ac79c166d806cd4cc317acc42}{Subtract\+Days}} (int d)
+\begin{DoxyCompactList}\small\item\em Subtrai dias da data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_date_time_afb5451110ab0cb4ed63c741666a1d21e}{Subtract\+Months}} (int m)
+\begin{DoxyCompactList}\small\item\em Subtrai meses da data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_date_time_abe5a9327e5054b7da262e78ec274b685}{Subtract\+Years}} (int y)
+\begin{DoxyCompactList}\small\item\em Subtrai anos da data. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_date_time_af7b66959f312ebf7b2240fa9998e9b11}{Get\+Full\+Year}} () const
+\begin{DoxyCompactList}\small\item\em Obtém o ano completo da data. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_date_time_a5c592250b3cfea8314e39d6ceb55dda6}{Get\+Month}} () const
+\begin{DoxyCompactList}\small\item\em Obtém o mês da data. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_date_time_a382848cb6b421e55965bcc920e58fa7c}{Get\+Date}} () const
+\begin{DoxyCompactList}\small\item\em Obtém o dia da data. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_date_time_a41d291fce2b2fda02f5ceb5d977c5597}{Get\+Hours}} () const
+\begin{DoxyCompactList}\small\item\em Obtém as horas da data. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_date_time_afc2a7ff42954c3ac760d578c9dc43b4c}{Get\+Minutes}} () const
+\begin{DoxyCompactList}\small\item\em Obtém os minutos da data. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_date_time_a95d0158a08b084f468fd31108a43d1d7}{Get\+Seconds}} () const
+\begin{DoxyCompactList}\small\item\em Obtém os segundos da data. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_date_time_af8f201eb3f584b9d345c30095732e642}{Get\+Day\+Of\+The\+Year}} () const
+\begin{DoxyCompactList}\small\item\em Obtém o dia do ano. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Atributos Públicos}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_date_time_af608557420dd510badb778d0d2d4b1b9}\label{class_date_time_af608557420dd510badb778d0d2d4b1b9} 
+int {\bfseries day}
+\begin{DoxyCompactList}\small\item\em Dia do mês. \end{DoxyCompactList}\item 
+\Hypertarget{class_date_time_a2233ee6732933c7a99fcc22802d680cc}\label{class_date_time_a2233ee6732933c7a99fcc22802d680cc} 
+int {\bfseries month}
+\begin{DoxyCompactList}\small\item\em Mês do ano. \end{DoxyCompactList}\item 
+\Hypertarget{class_date_time_a2321f5c6c78e5dda630c18e2cbae28dd}\label{class_date_time_a2321f5c6c78e5dda630c18e2cbae28dd} 
+int {\bfseries year}
+\begin{DoxyCompactList}\small\item\em Ano. \end{DoxyCompactList}\item 
+\Hypertarget{class_date_time_af649e5d8fadf681c83b40fdb784879dc}\label{class_date_time_af649e5d8fadf681c83b40fdb784879dc} 
+int {\bfseries hours}
+\begin{DoxyCompactList}\small\item\em Hora do dia. \end{DoxyCompactList}\item 
+\Hypertarget{class_date_time_a1427d705ebab4979490a6267a4d4ab67}\label{class_date_time_a1427d705ebab4979490a6267a4d4ab67} 
+int {\bfseries minutes}
+\begin{DoxyCompactList}\small\item\em Minutos. \end{DoxyCompactList}\item 
+\Hypertarget{class_date_time_a175e20246155f717a341882a0da2de94}\label{class_date_time_a175e20246155f717a341882a0da2de94} 
+int {\bfseries timestamp}
+\begin{DoxyCompactList}\small\item\em Timestamp (opcional). \end{DoxyCompactList}\item 
+\Hypertarget{class_date_time_a0b36196a591d08b2512b02f7058560ee}\label{class_date_time_a0b36196a591d08b2512b02f7058560ee} 
+int {\bfseries seconds}
+\begin{DoxyCompactList}\small\item\em Segundos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Amigos}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{class_date_time_a349e8dda083ae7cbf8f1dc355799b9c2}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{class_date_time}{Date\+Time}} \&date)
+\begin{DoxyCompactList}\small\item\em Sobrecarga do operador de inserção (\texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}) para imprimir a data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Descrição detalhada}
+Classe para representar e manipular datas e horários. 
+
+\doxysubsection{Construtores e Destrutores}
+\Hypertarget{class_date_time_a3f047959b60ca93f2b9b633e888172e6}\index{DateTime@{DateTime}!DateTime@{DateTime}}
+\index{DateTime@{DateTime}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{DateTime()}{DateTime()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily \label{class_date_time_a3f047959b60ca93f2b9b633e888172e6} 
+Date\+Time\+::\+Date\+Time (\begin{DoxyParamCaption}\item[{int}]{d}{, }\item[{int}]{m}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Construtor com dia, mês e ano. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em d} & Dia. \\
+\hline
+{\em m} & Mês. \\
+\hline
+{\em y} & Ano. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_date_time_aa08f8e2e2abe0f5f63580454dce65753}\index{DateTime@{DateTime}!DateTime@{DateTime}}
+\index{DateTime@{DateTime}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{DateTime()}{DateTime()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily \label{class_date_time_aa08f8e2e2abe0f5f63580454dce65753} 
+Date\+Time\+::\+Date\+Time (\begin{DoxyParamCaption}\item[{int}]{d}{, }\item[{int}]{m}{, }\item[{int}]{y}{, }\item[{int}]{h}{}\end{DoxyParamCaption})}
+
+
+
+Construtor com dia, mês, ano e horas. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em d} & Dia. \\
+\hline
+{\em m} & Mês. \\
+\hline
+{\em y} & Ano. \\
+\hline
+{\em h} & Horas. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_date_time_aed9a31d99f14363397f2105bfff24d45}\index{DateTime@{DateTime}!DateTime@{DateTime}}
+\index{DateTime@{DateTime}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{DateTime()}{DateTime()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily \label{class_date_time_aed9a31d99f14363397f2105bfff24d45} 
+Date\+Time\+::\+Date\+Time (\begin{DoxyParamCaption}\item[{int}]{d}{, }\item[{int}]{m}{, }\item[{int}]{y}{, }\item[{int}]{h}{, }\item[{int}]{min}{}\end{DoxyParamCaption})}
+
+
+
+Construtor com dia, mês, ano, horas e minutos. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em d} & Dia. \\
+\hline
+{\em m} & Mês. \\
+\hline
+{\em y} & Ano. \\
+\hline
+{\em h} & Horas. \\
+\hline
+{\em min} & Minutos. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_date_time_aa409e6a9501f5f276bf8156d1b103aef}\index{DateTime@{DateTime}!DateTime@{DateTime}}
+\index{DateTime@{DateTime}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{DateTime()}{DateTime()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily \label{class_date_time_aa409e6a9501f5f276bf8156d1b103aef} 
+Date\+Time\+::\+Date\+Time (\begin{DoxyParamCaption}\item[{int}]{d}{, }\item[{int}]{m}{, }\item[{int}]{y}{, }\item[{int}]{h}{, }\item[{int}]{min}{, }\item[{int}]{s}{, }\item[{int}]{ts}{}\end{DoxyParamCaption})}
+
+
+
+Construtor completo com todos os parâmetros. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em d} & Dia. \\
+\hline
+{\em m} & Mês. \\
+\hline
+{\em y} & Ano. \\
+\hline
+{\em h} & Horas. \\
+\hline
+{\em min} & Minutos. \\
+\hline
+{\em s} & Segundos. \\
+\hline
+{\em ts} & Timestamp. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Documentação das funções}
+\Hypertarget{class_date_time_a90f87353a7be05d5c1a48890f785b386}\index{DateTime@{DateTime}!ChangeTimeStamp@{ChangeTimeStamp}}
+\index{ChangeTimeStamp@{ChangeTimeStamp}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{ChangeTimeStamp()}{ChangeTimeStamp()}}
+{\footnotesize\ttfamily \label{class_date_time_a90f87353a7be05d5c1a48890f785b386} 
+void Date\+Time\+::\+Change\+Time\+Stamp (\begin{DoxyParamCaption}\item[{int}]{ts}{}\end{DoxyParamCaption})}
+
+
+
+Altera o timestamp da data. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em ts} & Novo timestamp. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_date_time_a382848cb6b421e55965bcc920e58fa7c}\index{DateTime@{DateTime}!GetDate@{GetDate}}
+\index{GetDate@{GetDate}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{GetDate()}{GetDate()}}
+{\footnotesize\ttfamily \label{class_date_time_a382848cb6b421e55965bcc920e58fa7c} 
+int Date\+Time\+::\+Get\+Date (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtém o dia da data. 
+
+\begin{DoxyReturn}{Retorna}
+Dia como inteiro. 
+\end{DoxyReturn}
+\Hypertarget{class_date_time_af8f201eb3f584b9d345c30095732e642}\index{DateTime@{DateTime}!GetDayOfTheYear@{GetDayOfTheYear}}
+\index{GetDayOfTheYear@{GetDayOfTheYear}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{GetDayOfTheYear()}{GetDayOfTheYear()}}
+{\footnotesize\ttfamily \label{class_date_time_af8f201eb3f584b9d345c30095732e642} 
+int Date\+Time\+::\+Get\+Day\+Of\+The\+Year (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtém o dia do ano. 
+
+\begin{DoxyReturn}{Retorna}
+Dia do ano como inteiro. 
+\end{DoxyReturn}
+\Hypertarget{class_date_time_af7b66959f312ebf7b2240fa9998e9b11}\index{DateTime@{DateTime}!GetFullYear@{GetFullYear}}
+\index{GetFullYear@{GetFullYear}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{GetFullYear()}{GetFullYear()}}
+{\footnotesize\ttfamily \label{class_date_time_af7b66959f312ebf7b2240fa9998e9b11} 
+int Date\+Time\+::\+Get\+Full\+Year (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtém o ano completo da data. 
+
+\begin{DoxyReturn}{Retorna}
+Ano como inteiro. 
+\end{DoxyReturn}
+\Hypertarget{class_date_time_a41d291fce2b2fda02f5ceb5d977c5597}\index{DateTime@{DateTime}!GetHours@{GetHours}}
+\index{GetHours@{GetHours}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{GetHours()}{GetHours()}}
+{\footnotesize\ttfamily \label{class_date_time_a41d291fce2b2fda02f5ceb5d977c5597} 
+int Date\+Time\+::\+Get\+Hours (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtém as horas da data. 
+
+\begin{DoxyReturn}{Retorna}
+Horas como inteiro. 
+\end{DoxyReturn}
+\Hypertarget{class_date_time_afc2a7ff42954c3ac760d578c9dc43b4c}\index{DateTime@{DateTime}!GetMinutes@{GetMinutes}}
+\index{GetMinutes@{GetMinutes}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{GetMinutes()}{GetMinutes()}}
+{\footnotesize\ttfamily \label{class_date_time_afc2a7ff42954c3ac760d578c9dc43b4c} 
+int Date\+Time\+::\+Get\+Minutes (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtém os minutos da data. 
+
+\begin{DoxyReturn}{Retorna}
+Minutos como inteiro. 
+\end{DoxyReturn}
+\Hypertarget{class_date_time_a5c592250b3cfea8314e39d6ceb55dda6}\index{DateTime@{DateTime}!GetMonth@{GetMonth}}
+\index{GetMonth@{GetMonth}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{GetMonth()}{GetMonth()}}
+{\footnotesize\ttfamily \label{class_date_time_a5c592250b3cfea8314e39d6ceb55dda6} 
+int Date\+Time\+::\+Get\+Month (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtém o mês da data. 
+
+\begin{DoxyReturn}{Retorna}
+Mês como inteiro. 
+\end{DoxyReturn}
+\Hypertarget{class_date_time_a95d0158a08b084f468fd31108a43d1d7}\index{DateTime@{DateTime}!GetSeconds@{GetSeconds}}
+\index{GetSeconds@{GetSeconds}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{GetSeconds()}{GetSeconds()}}
+{\footnotesize\ttfamily \label{class_date_time_a95d0158a08b084f468fd31108a43d1d7} 
+int Date\+Time\+::\+Get\+Seconds (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Obtém os segundos da data. 
+
+\begin{DoxyReturn}{Retorna}
+Segundos como inteiro. 
+\end{DoxyReturn}
+\Hypertarget{class_date_time_a4335cc58f26c7acfe9cc05ffa9304473}\index{DateTime@{DateTime}!isAfter@{isAfter}}
+\index{isAfter@{isAfter}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{isAfter()}{isAfter()}}
+{\footnotesize\ttfamily \label{class_date_time_a4335cc58f26c7acfe9cc05ffa9304473} 
+bool Date\+Time\+::is\+After (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_date_time}{Date\+Time}}}]{dt}{}\end{DoxyParamCaption})}
+
+
+
+Verifica se a data atual é posterior a outra data. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em dt} & Outro objeto \doxylink{class_date_time}{Date\+Time} para comparação. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true se for posterior, false caso contrário. 
+\end{DoxyReturn}
+\Hypertarget{class_date_time_a768e5e06de2e8717cd8151597ce34632}\index{DateTime@{DateTime}!isBefore@{isBefore}}
+\index{isBefore@{isBefore}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{isBefore()}{isBefore()}}
+{\footnotesize\ttfamily \label{class_date_time_a768e5e06de2e8717cd8151597ce34632} 
+bool Date\+Time\+::is\+Before (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_date_time}{Date\+Time}}}]{dt}{}\end{DoxyParamCaption})}
+
+
+
+Verifica se a data atual é anterior a outra data. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em dt} & Outro objeto \doxylink{class_date_time}{Date\+Time} para comparação. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true se for anterior, false caso contrário. 
+\end{DoxyReturn}
+\Hypertarget{class_date_time_aa5201d5fefb417c52e9dea3d6e4fd529}\index{DateTime@{DateTime}!isEqual@{isEqual}}
+\index{isEqual@{isEqual}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{isEqual()}{isEqual()}}
+{\footnotesize\ttfamily \label{class_date_time_aa5201d5fefb417c52e9dea3d6e4fd529} 
+bool Date\+Time\+::is\+Equal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_date_time}{Date\+Time}}}]{dt}{}\end{DoxyParamCaption})}
+
+
+
+Verifica se a data atual é igual a outra data. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em dt} & Outro objeto \doxylink{class_date_time}{Date\+Time} para comparação. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+true se for igual, false caso contrário. 
+\end{DoxyReturn}
+\Hypertarget{class_date_time_aecd98d6ac79c166d806cd4cc317acc42}\index{DateTime@{DateTime}!SubtractDays@{SubtractDays}}
+\index{SubtractDays@{SubtractDays}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{SubtractDays()}{SubtractDays()}}
+{\footnotesize\ttfamily \label{class_date_time_aecd98d6ac79c166d806cd4cc317acc42} 
+void Date\+Time\+::\+Subtract\+Days (\begin{DoxyParamCaption}\item[{int}]{d}{}\end{DoxyParamCaption})}
+
+
+
+Subtrai dias da data. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em d} & Dias a serem subtraídos. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_date_time_abd6ab83b6a660ed518e43dc2784b6b39}\index{DateTime@{DateTime}!SubtractHours@{SubtractHours}}
+\index{SubtractHours@{SubtractHours}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{SubtractHours()}{SubtractHours()}}
+{\footnotesize\ttfamily \label{class_date_time_abd6ab83b6a660ed518e43dc2784b6b39} 
+void Date\+Time\+::\+Subtract\+Hours (\begin{DoxyParamCaption}\item[{int}]{h}{}\end{DoxyParamCaption})}
+
+
+
+Subtrai horas da data. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em h} & Horas a serem subtraídas. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_date_time_a4cbde30313f26a72e09de5268b1282eb}\index{DateTime@{DateTime}!SubtractMinutes@{SubtractMinutes}}
+\index{SubtractMinutes@{SubtractMinutes}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{SubtractMinutes()}{SubtractMinutes()}}
+{\footnotesize\ttfamily \label{class_date_time_a4cbde30313f26a72e09de5268b1282eb} 
+void Date\+Time\+::\+Subtract\+Minutes (\begin{DoxyParamCaption}\item[{int}]{min}{}\end{DoxyParamCaption})}
+
+
+
+Subtrai minutos da data. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em min} & Minutos a serem subtraídos. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_date_time_afb5451110ab0cb4ed63c741666a1d21e}\index{DateTime@{DateTime}!SubtractMonths@{SubtractMonths}}
+\index{SubtractMonths@{SubtractMonths}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{SubtractMonths()}{SubtractMonths()}}
+{\footnotesize\ttfamily \label{class_date_time_afb5451110ab0cb4ed63c741666a1d21e} 
+void Date\+Time\+::\+Subtract\+Months (\begin{DoxyParamCaption}\item[{int}]{m}{}\end{DoxyParamCaption})}
+
+
+
+Subtrai meses da data. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em m} & Meses a serem subtraídos. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_date_time_a2569863cb7ebd2c2c798bd285cebbcc5}\index{DateTime@{DateTime}!SubtractSeconds@{SubtractSeconds}}
+\index{SubtractSeconds@{SubtractSeconds}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{SubtractSeconds()}{SubtractSeconds()}}
+{\footnotesize\ttfamily \label{class_date_time_a2569863cb7ebd2c2c798bd285cebbcc5} 
+void Date\+Time\+::\+Subtract\+Seconds (\begin{DoxyParamCaption}\item[{int}]{s}{}\end{DoxyParamCaption})}
+
+
+
+Subtrai segundos da data. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em s} & Segundos a serem subtraídos. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_date_time_abe5a9327e5054b7da262e78ec274b685}\index{DateTime@{DateTime}!SubtractYears@{SubtractYears}}
+\index{SubtractYears@{SubtractYears}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{SubtractYears()}{SubtractYears()}}
+{\footnotesize\ttfamily \label{class_date_time_abe5a9327e5054b7da262e78ec274b685} 
+void Date\+Time\+::\+Subtract\+Years (\begin{DoxyParamCaption}\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Subtrai anos da data. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em y} & Anos a serem subtraídos. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_date_time_a892383e6a0a5a6bdfa30d21cca9a79b2}\index{DateTime@{DateTime}!SumDays@{SumDays}}
+\index{SumDays@{SumDays}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{SumDays()}{SumDays()}}
+{\footnotesize\ttfamily \label{class_date_time_a892383e6a0a5a6bdfa30d21cca9a79b2} 
+void Date\+Time\+::\+Sum\+Days (\begin{DoxyParamCaption}\item[{int}]{d}{}\end{DoxyParamCaption})}
+
+
+
+Soma dias à data. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em d} & Dias a serem somados. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_date_time_a41821eff4df5ecee604efeff1b987093}\index{DateTime@{DateTime}!SumHours@{SumHours}}
+\index{SumHours@{SumHours}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{SumHours()}{SumHours()}}
+{\footnotesize\ttfamily \label{class_date_time_a41821eff4df5ecee604efeff1b987093} 
+void Date\+Time\+::\+Sum\+Hours (\begin{DoxyParamCaption}\item[{int}]{h}{}\end{DoxyParamCaption})}
+
+
+
+Soma horas à data. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em h} & Horas a serem somadas. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_date_time_ab48809d4b3c97ba7942cb981a9225e19}\index{DateTime@{DateTime}!SumMinutes@{SumMinutes}}
+\index{SumMinutes@{SumMinutes}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{SumMinutes()}{SumMinutes()}}
+{\footnotesize\ttfamily \label{class_date_time_ab48809d4b3c97ba7942cb981a9225e19} 
+void Date\+Time\+::\+Sum\+Minutes (\begin{DoxyParamCaption}\item[{int}]{min}{}\end{DoxyParamCaption})}
+
+
+
+Soma minutos à data. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em min} & Minutos a serem somados. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_date_time_a3a1dca6b1eaabbb598947e5b19378be5}\index{DateTime@{DateTime}!SumMonths@{SumMonths}}
+\index{SumMonths@{SumMonths}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{SumMonths()}{SumMonths()}}
+{\footnotesize\ttfamily \label{class_date_time_a3a1dca6b1eaabbb598947e5b19378be5} 
+void Date\+Time\+::\+Sum\+Months (\begin{DoxyParamCaption}\item[{int}]{m}{}\end{DoxyParamCaption})}
+
+
+
+Soma meses à data. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em m} & Meses a serem somados. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_date_time_a107c94313d5992b4dbc548b017b65180}\index{DateTime@{DateTime}!SumSeconds@{SumSeconds}}
+\index{SumSeconds@{SumSeconds}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{SumSeconds()}{SumSeconds()}}
+{\footnotesize\ttfamily \label{class_date_time_a107c94313d5992b4dbc548b017b65180} 
+void Date\+Time\+::\+Sum\+Seconds (\begin{DoxyParamCaption}\item[{int}]{s}{}\end{DoxyParamCaption})}
+
+
+
+Soma segundos à data. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em s} & Segundos a serem somados. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_date_time_aa5c12be3016087678a0388ef3bea197a}\index{DateTime@{DateTime}!SumYears@{SumYears}}
+\index{SumYears@{SumYears}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{SumYears()}{SumYears()}}
+{\footnotesize\ttfamily \label{class_date_time_aa5c12be3016087678a0388ef3bea197a} 
+void Date\+Time\+::\+Sum\+Years (\begin{DoxyParamCaption}\item[{int}]{y}{}\end{DoxyParamCaption})}
+
+
+
+Soma anos à data. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em y} & Anos a serem somados. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_date_time_a6ada9b441d558b7c4ec40aaf7d4e02c9}\index{DateTime@{DateTime}!ToISOString@{ToISOString}}
+\index{ToISOString@{ToISOString}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{ToISOString()}{ToISOString()}}
+{\footnotesize\ttfamily \label{class_date_time_a6ada9b441d558b7c4ec40aaf7d4e02c9} 
+string Date\+Time\+::\+To\+ISOString (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Converte a data para o formato ISO. 
+
+\begin{DoxyReturn}{Retorna}
+Data no formato ISO como string. 
+\end{DoxyReturn}
+\Hypertarget{class_date_time_a40053e072c619a03bfb99337fdf697b2}\index{DateTime@{DateTime}!ToString@{ToString}}
+\index{ToString@{ToString}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{ToString()}{ToString()}}
+{\footnotesize\ttfamily \label{class_date_time_a40053e072c619a03bfb99337fdf697b2} 
+string Date\+Time\+::\+To\+String (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Converte a data para string. 
+
+\begin{DoxyReturn}{Retorna}
+Representação em string da data. 
+\end{DoxyReturn}
+\Hypertarget{class_date_time_a459e62657b6f591a5b74c43bc639deff}\index{DateTime@{DateTime}!toUTC@{toUTC}}
+\index{toUTC@{toUTC}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{toUTC()}{toUTC()}}
+{\footnotesize\ttfamily \label{class_date_time_a459e62657b6f591a5b74c43bc639deff} 
+\mbox{\hyperlink{class_date_time}{Date\+Time}} Date\+Time\+::to\+UTC (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Converte a data para UTC. 
+
+\begin{DoxyReturn}{Retorna}
+Objeto \doxylink{class_date_time}{Date\+Time} correspondente no UTC. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Documentação dos símbolos amigos e relacionados}
+\Hypertarget{class_date_time_a349e8dda083ae7cbf8f1dc355799b9c2}\index{DateTime@{DateTime}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!DateTime@{DateTime}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily \label{class_date_time_a349e8dda083ae7cbf8f1dc355799b9c2} 
+std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os}{, }\item[{const \mbox{\hyperlink{class_date_time}{Date\+Time}} \&}]{date}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Sobrecarga do operador de inserção (\texorpdfstring{$<$}{<}\texorpdfstring{$<$}{<}) para imprimir a data. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em os} & Stream de saída. \\
+\hline
+{\em date} & Objeto \doxylink{class_date_time}{Date\+Time} a ser impresso. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+Stream de saída modificado. 
+\end{DoxyReturn}
+
+
+A documentação para essa classe foi gerada a partir dos seguintes arquivos\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_date_time_8h}{Date\+Time.\+h}}\item 
+\mbox{\hyperlink{_date_time_8cpp}{Date\+Time.\+cpp}}\end{DoxyCompactItemize}

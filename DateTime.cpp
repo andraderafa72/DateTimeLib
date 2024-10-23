@@ -1,9 +1,16 @@
+/**
+ * @file DateTime.cpp
+ * @brief Implementation da classe DateTime
+ */
+
 #include <iostream>
 #include <string>
 
 #include "DateTime.h"
 
 using namespace std;
+
+#pragma region Private Methods
 
 string DateTime::CompareThisDate(DateTime dt)
 {
@@ -39,7 +46,7 @@ string DateTime::CompareThisDate(DateTime dt)
     return "smaller";
 }
 
-void DateTime::ValidateTime(int d, int m, int y, int h, int min, int s)
+void DateTime::ValidateTime(int y, int m, int d, int h, int min, int s)
 {
   if (d > 31 || d < 1)
     throw std::invalid_argument("DateTime Exception: Invalid 'day' argument. It must be between 1 and 31");
@@ -55,7 +62,7 @@ void DateTime::ValidateTime(int d, int m, int y, int h, int min, int s)
     throw std::invalid_argument("DateTime Exception: Invalid 'seconds' argument. It must be between 0 and 59");
 };
 
-int DateTime::isLeapYear(int year)
+int DateTime::isLeapYear(int year) const
 {
   return (year % 4 == 0) && ((year % 100 != 0) || (year % 400 == 0));
 }
@@ -102,10 +109,14 @@ int DateTime::GetDateByDays(int days, int currentYear)
   return daysAux;
 };
 
+#pragma endregion
+
+#pragma region Constructors
+
 DateTime::DateTime(){};
-DateTime::DateTime(int d, int m, int y)
+DateTime::DateTime(int y, int m, int d)
 {
-  ValidateTime(d, m, y, 0, 0, 0);
+  ValidateTime(y, m, d, 0, 0, 0);
   day = d;
   month = m;
   year = y;
@@ -114,9 +125,9 @@ DateTime::DateTime(int d, int m, int y)
   seconds = 0;
   timestamp = 0;
 }
-DateTime::DateTime(int d, int m, int y, int h)
+DateTime::DateTime(int y, int m, int d, int h)
 {
-  ValidateTime(d, m, y, h, 0, 0);
+  ValidateTime(y, m, d, h, 0, 0);
   day = d;
   month = m;
   year = y;
@@ -125,9 +136,9 @@ DateTime::DateTime(int d, int m, int y, int h)
   seconds = 0;
   timestamp = 0;
 };
-DateTime::DateTime(int d, int m, int y, int h, int min)
+DateTime::DateTime(int y, int m, int d, int h, int min)
 {
-  ValidateTime(d, m, y, h, min, 0);
+  ValidateTime(y, m, d, h, min, 0);
   day = d;
   month = m;
   year = y;
@@ -136,9 +147,9 @@ DateTime::DateTime(int d, int m, int y, int h, int min)
   seconds = 0;
   timestamp = 0;
 };
-DateTime::DateTime(int d, int m, int y, int h, int min, int s, int ts)
+DateTime::DateTime(int y, int m, int d, int h, int min, int s, int ts)
 {
-  ValidateTime(d, m, y, h, min, s);
+  ValidateTime(y, m, d, h, min, s);
   day = d;
   month = m;
   year = y;
@@ -148,119 +159,28 @@ DateTime::DateTime(int d, int m, int y, int h, int min, int s, int ts)
   timestamp = ts;
 };
 
-DateTime DateTime::Compare(DateTime another_time, string output = "D")
+#pragma endregion
+
+#pragma region Comparisors
+
+bool DateTime::isBefore(DateTime dt)
 {
-  // VALIDAÇÃO DE VALORES
-  bool isTheSameDate = year == another_time.year && month == another_time.month && day == another_time.day;
-  bool isThisBiggerThanComparedDate = CompareThisDate(another_time) == "bigger";
-
-  unsigned long startDays, finalDays, startYear;
-  unsigned long def_anos = 0;
-
-  register int i;
-  int dbissexto;
-
-  startDays = isThisBiggerThanComparedDate ? another_time.day : day;
-  dbissexto = isLeapYear(!isThisBiggerThanComparedDate ? another_time.year : year);
-  startYear = isThisBiggerThanComparedDate ? another_time.year : year;
-
-  for (i = month - 1; i > 0; --i)
-    startDays += days_per_month[dbissexto][i];
-
-  finalDays = isThisBiggerThanComparedDate ? day : another_time.day;
-  dbissexto = isLeapYear(!isThisBiggerThanComparedDate ? another_time.year : year);
-
-  for (i = another_time.month - 1; i > 0; --i)
-    finalDays += days_per_month[dbissexto][i];
-
-  int yearAux = isThisBiggerThanComparedDate ? year : another_time.year;
-  while (startYear < yearAux)
-    def_anos += 365 + isLeapYear(startYear++);
-
-  long totalDaysDifference = def_anos - startDays + finalDays;
-  totalDaysDifference = totalDaysDifference > 0 ? totalDaysDifference : -totalDaysDifference;
-
-  long aux = totalDaysDifference;
-  DateTime diffDt;
-  diffDt.year = aux / 365;
-  aux -= diffDt.year * 365;
-  diffDt.month = MonthFromDays(aux, diffDt.year);
-  diffDt.day = GetDateByDays(aux, diffDt.year);
-
-  return diffDt;
-}
-
-string DateTime::ToString() // dd/MM/yyyy hh:mm:ss
-{
-  string dayString = day < 10 ? "0" + to_string(day) : to_string(day);
-  string monthString = month < 10 ? "0" + to_string(month) : to_string(month);
-  string hoursString = hours < 10 ? "0" + to_string(hours) : to_string(hours);
-  string minutesString = minutes < 10 ? "0" + to_string(minutes) : to_string(minutes);
-  string secondsString = seconds < 10 ? "0" + to_string(seconds) : to_string(seconds);
-  string yearString;
-
-  if (year < 10)
-  {
-    yearString = "000" + to_string(year);
-  }
-  else if (year < 100)
-  {
-    yearString = "00" + to_string(year);
-  }
-  else if (year < 1000)
-  {
-    yearString = "0" + to_string(year);
-  }
-  else
-  {
-    yearString = to_string(year);
-  }
-
-  return dayString + "/" + monthString + "/" + yearString + " " + hoursString + ":" + minutesString + ":" + secondsString;
-}
-
-string DateTime::ToISOString() // dd/MM/yyyy hh:mm:ss
-{
-  string dayString = day < 10 ? "0" + to_string(day) : to_string(day);
-  string monthString = month < 10 ? "0" + to_string(month) : to_string(month);
-  string hoursString = hours < 10 ? "0" + to_string(hours) : to_string(hours);
-  string minutesString = minutes < 10 ? "0" + to_string(minutes) : to_string(minutes);
-  string secondsString = seconds < 10 ? "0" + to_string(seconds) : to_string(seconds);
-  string yearString;
-
-  if (year < 10)
-  {
-    yearString = "000" + to_string(year);
-  }
-  else if (year < 100)
-  {
-    yearString = "00" + to_string(year);
-  }
-  else if (year < 1000)
-  {
-    yearString = "0" + to_string(year);
-  }
-  else
-  {
-    yearString = to_string(year);
-  }
-
-  return yearString + "-" + monthString + "-" + dayString + "T" + hoursString + ":" + minutesString + ":" + secondsString + ".000Z";
-}
-
-DateTime DateTime::toUTC()
-{
-  if (timestamp != 0)
-    SubtractHours(timestamp > 0 ? timestamp : -timestamp);
-
-  return DateTime(day, month, year, hours, minutes, seconds, 0);
-}
-
-void DateTime::ChangeTimeStamp(int ts)
-{
-  SubtractHours(timestamp > 0 ? timestamp : -timestamp);
-  SumHours(ts);
+  return CompareThisDate(dt) == "smaller";
 };
+
+bool DateTime::isAfter(DateTime dt)
+{
+  return CompareThisDate(dt) == "bigger";
+};
+
+bool DateTime::isEqual(DateTime dt)
+{
+  return CompareThisDate(dt) == "equal";
+};
+
+#pragma endregion
+
+#pragma region Date Operations
 
 void DateTime::SumSeconds(int s)
 {
@@ -406,29 +326,17 @@ void DateTime::SubtractYears(int y)
   year = newY;
 }
 
-bool DateTime::isBefore(DateTime dt)
-{
-  return CompareThisDate(dt) == "smaller";
-};
+#pragma endregion
 
-bool DateTime::isAfter(DateTime dt)
-{
-  return CompareThisDate(dt) == "bigger";
-};
+#pragma region Acessors
 
-bool DateTime::isEqual(DateTime dt)
-{
-  return CompareThisDate(dt) == "equal";
-};
-
-int DateTime::GetFullYear() { return year; }
-int DateTime::GetMonth() { return month; }
-int DateTime::GetDate() { return day; }
-int DateTime::GetHours() { return hours; }
-int DateTime::GetMinutes() { return month; }
-int DateTime::GetSeconds() { return seconds; }
-
-int DateTime::GetDayOfTheYear()
+int DateTime::GetFullYear() const { return year; }
+int DateTime::GetMonth() const { return month; }
+int DateTime::GetDate() const { return day; }
+int DateTime::GetHours() const { return hours; }
+int DateTime::GetMinutes() const { return month; }
+int DateTime::GetSeconds() const { return seconds; }
+int DateTime::GetDayOfTheYear() const
 {
   int isLeap = isLeapYear(year);
   int dayOfTheYear = 0;
@@ -442,3 +350,77 @@ int DateTime::GetDayOfTheYear()
   dayOfTheYear += day;
   return dayOfTheYear;
 }
+
+#pragma endregion
+
+string DateTime::ToString() const // dd/MM/yyyy hh:mm:ss
+{
+  string dayString = day < 10 ? "0" + to_string(day) : to_string(day);
+  string monthString = month < 10 ? "0" + to_string(month) : to_string(month);
+  string hoursString = hours < 10 ? "0" + to_string(hours) : to_string(hours);
+  string minutesString = minutes < 10 ? "0" + to_string(minutes) : to_string(minutes);
+  string secondsString = seconds < 10 ? "0" + to_string(seconds) : to_string(seconds);
+  string yearString;
+
+  if (year < 10)
+  {
+    yearString = "000" + to_string(year);
+  }
+  else if (year < 100)
+  {
+    yearString = "00" + to_string(year);
+  }
+  else if (year < 1000)
+  {
+    yearString = "0" + to_string(year);
+  }
+  else
+  {
+    yearString = to_string(year);
+  }
+
+  return dayString + "/" + monthString + "/" + yearString + " " + hoursString + ":" + minutesString + ":" + secondsString;
+}
+
+string DateTime::ToISOString() const // dd/MM/yyyy hh:mm:ss
+{
+  string dayString = day < 10 ? "0" + to_string(day) : to_string(day);
+  string monthString = month < 10 ? "0" + to_string(month) : to_string(month);
+  string hoursString = hours < 10 ? "0" + to_string(hours) : to_string(hours);
+  string minutesString = minutes < 10 ? "0" + to_string(minutes) : to_string(minutes);
+  string secondsString = seconds < 10 ? "0" + to_string(seconds) : to_string(seconds);
+  string yearString;
+
+  if (year < 10)
+  {
+    yearString = "000" + to_string(year);
+  }
+  else if (year < 100)
+  {
+    yearString = "00" + to_string(year);
+  }
+  else if (year < 1000)
+  {
+    yearString = "0" + to_string(year);
+  }
+  else
+  {
+    yearString = to_string(year);
+  }
+
+  return yearString + "-" + monthString + "-" + dayString + "T" + hoursString + ":" + minutesString + ":" + secondsString + ".000Z";
+}
+
+DateTime DateTime::toUTC()
+{
+  if (timestamp != 0)
+    SubtractHours(timestamp > 0 ? timestamp : -timestamp);
+
+  return DateTime(day, month, year, hours, minutes, seconds, 0);
+}
+
+void DateTime::ChangeTimeStamp(int ts)
+{
+  SubtractHours(timestamp > 0 ? timestamp : -timestamp);
+  SumHours(ts);
+};
