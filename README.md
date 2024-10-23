@@ -18,6 +18,9 @@ A documentação completa do projeto está disponível nas seguintes fontes:
 - **GitBook**: [Documentação GitBook](https://rafaels-organization-19.gitbook.io/datetime-lib)  
   Aqui, você encontrará um guia abrangente sobre a classe `DateTime`, incluindo exemplos de uso e explicações dos métodos disponíveis.
 
+- **Mardown**: [Pasta Docs](https://github.com/andraderafa72/DateTimeLib/tree/main/docs/md/index.md)  
+  Aqui, você encontrará um guia abrangente sobre a classe `DateTime`, incluindo exemplos de uso e explicações dos métodos disponíveis.
+
 ## Requisitos
 - C++11 ou superior
 
