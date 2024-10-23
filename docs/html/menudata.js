@@ -24,29 +24,4 @@
 */
 var menudata={children:[
 {text:"Página Principal",url:"index.html"},
-{text:"Classes",url:"annotated.html",children:[
-{text:"Lista de Classes",url:"annotated.html"},
-{text:"Índice dos Componentes",url:"classes.html"},
-{text:"Membros de classe",url:"functions.html",children:[
-{text:"Todos",url:"functions.html",children:[
-{text:"c",url:"functions.html#index_c"},
-{text:"d",url:"functions.html#index_d"},
-{text:"g",url:"functions.html#index_g"},
-{text:"h",url:"functions.html#index_h"},
-{text:"i",url:"functions.html#index_i"},
-{text:"m",url:"functions.html#index_m"},
-{text:"o",url:"functions.html#index_o"},
-{text:"s",url:"functions.html#index_s"},
-{text:"t",url:"functions.html#index_t"},
-{text:"y",url:"functions.html#index_y"}]},
-{text:"Funções",url:"functions_func.html",children:[
-{text:"c",url:"functions_func.html#index_c"},
-{text:"d",url:"functions_func.html#index_d"},
-{text:"g",url:"functions_func.html#index_g"},
-{text:"i",url:"functions_func.html#index_i"},
-{text:"s",url:"functions_func.html#index_s"},
-{text:"t",url:"functions_func.html#index_t"}]},
-{text:"Variáveis",url:"functions_vars.html"},
-{text:"Símbolos relacionados",url:"functions_rela.html"}]}]},
-{text:"Arquivos",url:"files.html",children:[
-{text:"Lista de Arquivos",url:"files.html"}]}]}
+{text:"Páginas relacionadas",url:"pages.html"}]}

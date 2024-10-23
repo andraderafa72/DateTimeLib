@@ -171,13 +171,13 @@ public:
      * @brief Converte a data para UTC.
      * @return Objeto DateTime correspondente no UTC.
      */
-    DateTime to_UTC();
+    DateTime to_UTC() const;
 
     /**
      * @brief Altera o timezone da data.
      * @param ts Novo timezone.
      */
-    void change_time_stamp(int ts);
+    void change_timezone(int ts);
 
     /* DATE OPERATIONS */
 

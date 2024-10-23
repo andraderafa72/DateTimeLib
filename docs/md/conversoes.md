@@ -14,7 +14,7 @@ string to_string() const;
 #### Exemplo:
 
 ```c++
-DateTime dt(23, 10, 2024, 14, 30, 45);
+DateTime date(2024, 10, 23, 8, 15, 30);
 string dateString = dt.to_string();  // "23/10/2024 14:30:45"
 ```
 
@@ -30,7 +30,7 @@ string to_ISO_string() const;
 #### Exemplo:
 
 ```c++
-DateTime dt(23, 10, 2024, 14, 30, 45);
+DateTime date(2024, 10, 23, 8, 15, 30);
 string isoString = dt.to_ISO_string();  // "2024-10-23T14:30:45.000Z"
 ```
 

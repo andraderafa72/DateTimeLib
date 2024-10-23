@@ -23,7 +23,7 @@ int get_full_year() const;
 #### Exemplo:
 
 ```c++
-DateTime dt(23, 10, 2024);
+DateTime date(2024, 10, 23);
 int year = dt.get_full_year();  // year será 2024
 ```
 
@@ -40,7 +40,7 @@ int get_month() const;
 #### Exemplo:
 
 ```c++
-DateTime dt(23, 10, 2024);
+DateTime date(2024, 10, 23);
 int month = dt.get_month();  // month será 10
 ```
 
@@ -57,7 +57,7 @@ int get_date() const;
 #### Exemplo:
 
 ```c++
-DateTime dt(23, 10, 2024);
+DateTime date(2024, 10, 23);
 int day = dt.get_date();  // day será 23
 ```
 
@@ -74,7 +74,7 @@ int het_hours() const;
 #### Exemplo:
 
 ```c++
-DateTime dt(23, 10, 2024, 14);
+DateTime date(2024, 10, 23, 14);
 int hours = dt.GetHours();  // hours será 14
 ```
 
@@ -91,7 +91,7 @@ int get_minutes() const;
 #### Exemplo:
 
 ```c++
-DateTime dt(23, 10, 2024, 14, 30);
+DateTime date(2024, 10, 23, 14, 30);
 int minutes = dt.get_minutes();  // minutes será 30
 ```
 
@@ -108,7 +108,7 @@ int get_seconds() const;
 #### Exemplo:
 
 ```c++
-DateTime dt(23, 10, 2024, 14, 30, 45);
+DateTime date(2024, 10, 23, 8, 15, 30);
 int seconds = dt.get_seconds();  // seconds será 45
 ```
 
@@ -125,7 +125,7 @@ int get_day_of_the_year() const;
 #### Exemplo:
 
 ```c++
-DateTime dt(23, 10, 2024);
+DateTime date(2024, 10, 23);
 int dayOfYear = dt.get_day_of_the_year();  // dayOfYear será o número do dia no ano
 ```
 

@@ -23,7 +23,7 @@ O operador << formata a saída do objeto DateTime como uma string no formato dd/
 #include <iostream>
 
 int main() {
-    DateTime date(23, 10, 2024, 14, 30, 45);
+    DateTime date(2024, 10, 23, 8, 15, 30);
     
     // Saída: "Data e Hora: 23/10/2024 14:30:45"
     std::cout << "Data e Hora: " << date << std::endl;

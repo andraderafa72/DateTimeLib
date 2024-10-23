@@ -1,0 +1,52 @@
+\chapter{Projeto Date\+Time}
+\hypertarget{md__r_e_a_d_m_e}{}\label{md__r_e_a_d_m_e}\index{Projeto DateTime@{Projeto DateTime}}
+\label{md__r_e_a_d_m_e_autotoc_md0}%
+\Hypertarget{md__r_e_a_d_m_e_autotoc_md0}%
+\hypertarget{md__r_e_a_d_m_e_autotoc_md1}{}\doxysection{\texorpdfstring{Descrição}{Descrição}}\label{md__r_e_a_d_m_e_autotoc_md1}
+O projeto {\ttfamily Date\+Time} é uma implementação de uma classe em C++ que fornece funcionalidades para manipulação de datas e horas. A classe permite a criação, comparação, formatação e operação com datas, facilitando a gestão de informações temporais em aplicações.\hypertarget{md__r_e_a_d_m_e_autotoc_md2}{}\doxysection{\texorpdfstring{Funcionalidades}{Funcionalidades}}\label{md__r_e_a_d_m_e_autotoc_md2}
+
+\begin{DoxyItemize}
+\item Criação de objetos de data e hora.
+\item Comparações entre diferentes instâncias de {\ttfamily Date\+Time}.
+\item Conversão de instâncias para strings em formatos legíveis e padronizados.
+\item Manipulação de datas através da adição e subtração de unidades de tempo (segundos, minutos, horas, dias, meses e anos).
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md3}{}\doxysection{\texorpdfstring{Documentação}{Documentação}}\label{md__r_e_a_d_m_e_autotoc_md3}
+A documentação completa do projeto está disponível nas seguintes fontes\+:
+
+
+\begin{DoxyItemize}
+\item {\bfseries{Doxygen}}\+: \href{https://andraderafa72.github.io/DateTimeLib/html/}{\texttt{ Documentação Doxygen}} ~\newline
+ Esta documentação fornece detalhes sobre a implementação e a utilização da classe, incluindo informações sobre cada método e seus parâmetros.
+\item {\bfseries{Git\+Book}}\+: \href{https://rafaels-organization-19.gitbook.io/datetime-lib}{\texttt{ Documentação Git\+Book}} ~\newline
+ Aqui, você encontrará um guia abrangente sobre a classe {\ttfamily Date\+Time}, incluindo exemplos de uso e explicações dos métodos disponíveis.
+\item {\bfseries{Mardown}}\+: \href{https://github.com/andraderafa72/DateTimeLib/tree/main/docs/md/index.md}{\texttt{ Pasta Docs}} ~\newline
+ Aqui, você encontrará um guia abrangente sobre a classe {\ttfamily Date\+Time}, incluindo exemplos de uso e explicações dos métodos disponíveis.
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md4}{}\doxysection{\texorpdfstring{Requisitos}{Requisitos}}\label{md__r_e_a_d_m_e_autotoc_md4}
+
+\begin{DoxyItemize}
+\item C++11 ou superior
+\end{DoxyItemize}\hypertarget{md__r_e_a_d_m_e_autotoc_md5}{}\doxysection{\texorpdfstring{Uso}{Uso}}\label{md__r_e_a_d_m_e_autotoc_md5}
+Inclua os arquivos {\ttfamily Date\+Time.\+cpp} e {\ttfamily Date\+Time.\+h} da pasta \href{https://github.com/andraderafa72/DateTimeLib/tree/main/source}{\texttt{ source}} em seu projeto e referencie o {\ttfamily Date\+Time.\+cpp} em seu processo de compilação.\hypertarget{md__r_e_a_d_m_e_autotoc_md6}{}\doxysubsection{\texorpdfstring{Exemplo com {\ttfamily cmake}\+:}{Exemplo com {\ttfamily cmake}\+:}}\label{md__r_e_a_d_m_e_autotoc_md6}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md7}{}\doxysubsubsection{\texorpdfstring{Arquivo {\ttfamily CMake\+Lists.\+txt}\+:}{Arquivo {\ttfamily CMake\+Lists.\+txt}\+:}}\label{md__r_e_a_d_m_e_autotoc_md7}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{add\_executable(DateTimeLib}
+\DoxyCodeLine{\ \ \ \ "{}DateTime.cpp"{}}
+\DoxyCodeLine{\ \ \ \ \#\ Arquivos\ do\ seu\ projeto}
+\DoxyCodeLine{\ \ \ \ "{}main.cpp"{}}
+\DoxyCodeLine{)}
+
+\end{DoxyCode}
+\hypertarget{md__r_e_a_d_m_e_autotoc_md8}{}\doxysubsubsection{\texorpdfstring{Utilização\+:}{Utilização\+:}}\label{md__r_e_a_d_m_e_autotoc_md8}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\ ++}
+\DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}path/to/DateTime.h"{}}}
+\DoxyCodeLine{}
+\DoxyCodeLine{}
+\DoxyCodeLine{DateTime\ create\_date()\ \{}
+\DoxyCodeLine{\ \ \textcolor{keywordflow}{return}\ DateTime(2024,\ 10,\ 23);\ \textcolor{comment}{//\ 23/10/2024\ 00:00:00}}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+ 

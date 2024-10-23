@@ -12,7 +12,7 @@
 
 #pragma region Private Methods
 
-string DateTime::compare_this_date(DateTime dt)
+std::string DateTime::compare_this_date(DateTime dt)
 {
   int thisComponents[] = {year, month, day, hours, minutes, seconds};
   int dtComponents[] = {dt.year, dt.month, dt.day, dt.hours, dt.minutes, dt.seconds};
@@ -377,67 +377,48 @@ int DateTime::get_day_of_the_year() const
 
 #pragma endregion
 
-string DateTime::to_string() const // dd/MM/yyyy hh:mm:ss
+auto pad_zero = [](int value)
 {
-  string dayString = day < 10 ? "0" + std::to_string(day) : std::to_string(day);
-  string monthString = month < 10 ? "0" + std::to_string(month) : std::to_string(month);
-  string hoursString = hours < 10 ? "0" + std::to_string(hours) : std::to_string(hours);
-  string minutesString = minutes < 10 ? "0" + std::to_string(minutes) : std::to_string(minutes);
-  string secondsString = seconds < 10 ? "0" + std::to_string(seconds) : std::to_string(seconds);
-  string yearString;
+  return (value < 10 ? "0" : "") + std::to_string(value);
+};
 
-  if (year < 10)
-  {
-    yearString = "000" + std::to_string(year);
-  }
-  else if (year < 100)
-  {
-    yearString = "00" + std::to_string(year);
-  }
-  else if (year < 1000)
-  {
-    yearString = "0" + std::to_string(year);
-  }
-  else
-  {
-    yearString = std::to_string(year);
-  }
+std::string DateTime::to_string() const // dd/MM/yyyy hh:mm:ss
+{
+  std::string yearString = std::to_string(year);
+  yearString.insert(0, 4 - yearString.length(), '0');
 
-  return dayString + "/" + monthString + "/" + yearString + " " + hoursString + ":" + minutesString + ":" + secondsString;
+  return pad_zero(day) + "/" + pad_zero(month) + "/" + yearString + " " +
+         pad_zero(hours) + ":" + pad_zero(minutes) + ":" + pad_zero(seconds);
 }
 
-string DateTime::to_ISO_string() const // yyyy-MM-ddThh:mm:ss.000Z
+std::string DateTime::to_ISO_string() const // yyyy-MM-ddThh:mm:ss.000Z
 {
-  DateTime tempDate(year, month, day, hours, minutes, seconds, timezone);
+  DateTime tempDate = DateTime(year, month, day, hours, minutes, seconds, timezone).to_UTC();
 
-  if (timezone > 0)
-    tempDate.subtract_hours(timezone);
-  else if (timezone < 0)
-    tempDate.sum_hours(-timezone);
-  
-
-  auto pad_zero = [](int value)
-  {
-    return (value < 10 ? "0" : "") + std::to_string(value);
-  };
-
-  string yearString = std::to_string(tempDate.year);
+  std::string yearString = std::to_string(tempDate.year);
   yearString.insert(0, 4 - yearString.length(), '0');
 
   return yearString + "-" + pad_zero(tempDate.month) + "-" + pad_zero(tempDate.day) + "T" +
          pad_zero(tempDate.hours) + ":" + pad_zero(tempDate.minutes) + ":" + pad_zero(tempDate.seconds) + ".000Z";
 }
 
-DateTime DateTime::to_UTC()
+DateTime DateTime::to_UTC() const
 {
-  if (timezone != 0)
-    subtract_hours(timezone > 0 ? timezone : -timezone);
+  DateTime newDate(year, month, day, hours, minutes, seconds, timezone);
+  newDate.change_timezone(0);
 
-  return DateTime(day, month, year, hours, minutes, seconds, 0);
+  return newDate;
 }
 
-void DateTime::change_time_stamp(int ts)
+void DateTime::change_timezone(int newTimezone)
 {
-  subtract_hours(timezone > 0 ? timezone : -timezone);
-  sum_hours(ts);
+  if (timezone > 0)
+    subtract_hours(timezone);
+  else if(timezone < 0)
+    sum_hours(-timezone);
+
+  if (newTimezone > 0)
+    sum_hours(newTimezone);
+  else if(newTimezone < 0)
+    subtract_hours(-newTimezone);
 };

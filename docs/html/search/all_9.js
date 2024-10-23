@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['year_0',['year',['../class_date_time.html#a2321f5c6c78e5dda630c18e2cbae28dd',1,'DateTime']]]
+  ['uso_0',['Uso',['../md__r_e_a_d_m_e.html#autotoc_md5',1,'']]],
+  ['utilização_3a_1',['Utilização:',['../md__r_e_a_d_m_e.html#autotoc_md8',1,'']]]
 ];

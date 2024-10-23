@@ -14,8 +14,9 @@ int main(int argc, char *argv[])
     
   DateTime date2(2024, 10, 23);
   date2.timezone = -3;
-  std::cout << "\nDay of the year: " << date2.get_day_of_the_year() << std::endl;
-  std::cout << "\nISO string: " << date2.to_ISO_string() << std::endl;
+  std::cout << "\nDate string: " << date2.to_string();
+  std::cout << "\nDate ISO string: " << date2.to_ISO_string();
+  std::cout << "\nDay of the year: " << date2.get_day_of_the_year();
 
   return 0;
 }
