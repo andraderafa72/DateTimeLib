@@ -70,7 +70,7 @@ public:
         year,      ///< Ano.
         hours,     ///< Hora do dia.
         minutes,   ///< Minutos.
-        timezone, ///< Timestamp (opcional).
+        timezone, ///< Timezone (opcional).
         seconds;   ///< Segundos.
 
     /* CONSTRUCTORS */
