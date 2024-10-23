@@ -131,16 +131,28 @@ DateTime::DateTime(int y, int m, int d, int h, int min)
   seconds = 0;
   timezone = 0;
 };
-DateTime::DateTime(int y, int m, int d, int h, int min, int s, int ts)
+DateTime::DateTime(int y, int m, int d, int h, int min, int s)
 {
-  validate_time(y, m, d, h, min, s, ts);
+  validate_time(y, m, d, h, min, s, 0);
   day = d;
   month = m;
   year = y;
   hours = h;
   minutes = min;
   seconds = s;
-  timezone = ts;
+  timezone = 0;
+};
+
+DateTime::DateTime(int y, int m, int d, int h, int min, int s, int tz)
+{
+  validate_time(y, m, d, h, min, s, tz);
+  day = d;
+  month = m;
+  year = y;
+  hours = h;
+  minutes = min;
+  seconds = s;
+  timezone = tz;
 };
 
 #pragma endregion

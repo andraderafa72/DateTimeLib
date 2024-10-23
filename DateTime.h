@@ -115,7 +115,18 @@ public:
      * @param h Horas.
      * @param min Minutos.
      * @param s Segundos.
-     * @param ts Timestamp.
+     */
+    DateTime(int y, int m, int d, int h, int min, int s);
+
+    /**
+     * @brief Construtor completo com todos os parâmetros.
+     * @param y Ano.
+     * @param m Mês.
+     * @param d Dia.
+     * @param h Horas.
+     * @param min Minutos.
+     * @param s Segundos.
+     * @param ts Timezone.
      */
     DateTime(int y, int m, int d, int h, int min, int s, int ts);
 
