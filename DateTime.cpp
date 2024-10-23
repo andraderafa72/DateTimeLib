@@ -28,12 +28,14 @@ string DateTime::compare_this_date(DateTime dt)
   return "equal";
 }
 
-void DateTime::validate_time(int y, int m, int d, int h, int min, int s)
+void DateTime::validate_time(int y, int m, int d, int h, int min, int s, int ts)
 {
   if (d > 31 || d < 1)
     throw std::invalid_argument("DateTime Exception: Invalid 'day' argument. It must be between 1 and 31");
   if (m > 12 || m < 1)
     throw std::invalid_argument("DateTime Exception: Invalid 'month' argument. It must be between 1 and 12");
+  if (ts >= -12 || ts <= 12)
+    throw std::invalid_argument("DateTime Exception: Invalid 'time stamp' argument. It must be between -12 and 12");
   if (y < 1)
     throw std::invalid_argument("DateTime Exception: Invalid 'year' argument. It must be bigger than 1");
   if (h > 23 || h < 0)
@@ -98,7 +100,7 @@ int DateTime::get_date_by_days(int days, int currentYear)
 DateTime::DateTime() {};
 DateTime::DateTime(int y, int m, int d)
 {
-  validate_time(y, m, d, 0, 0, 0);
+  validate_time(y, m, d, 0, 0, 0, 0);
   day = d;
   month = m;
   year = y;
@@ -109,7 +111,7 @@ DateTime::DateTime(int y, int m, int d)
 }
 DateTime::DateTime(int y, int m, int d, int h)
 {
-  validate_time(y, m, d, h, 0, 0);
+  validate_time(y, m, d, h, 0, 0, 0);
   day = d;
   month = m;
   year = y;
@@ -120,7 +122,7 @@ DateTime::DateTime(int y, int m, int d, int h)
 };
 DateTime::DateTime(int y, int m, int d, int h, int min)
 {
-  validate_time(y, m, d, h, min, 0);
+  validate_time(y, m, d, h, min, 0, 0);
   day = d;
   month = m;
   year = y;
@@ -131,7 +133,7 @@ DateTime::DateTime(int y, int m, int d, int h, int min)
 };
 DateTime::DateTime(int y, int m, int d, int h, int min, int s, int ts)
 {
-  validate_time(y, m, d, h, min, s);
+  validate_time(y, m, d, h, min, s, ts);
   day = d;
   month = m;
   year = y;

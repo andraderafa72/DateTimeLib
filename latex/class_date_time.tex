@@ -15,13 +15,13 @@ Classe para representar e manipular datas e horários.
 \Hypertarget{class_date_time_a3ccfb87f7a2e9683b91964e32d907161}\label{class_date_time_a3ccfb87f7a2e9683b91964e32d907161} 
 {\bfseries Date\+Time} ()
 \begin{DoxyCompactList}\small\item\em Construtor padrão. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_date_time_a3f047959b60ca93f2b9b633e888172e6}{Date\+Time}} (int d, int m, int y)
+\mbox{\hyperlink{class_date_time_a64a66de21d00a0a064a6facc08bd58a5}{Date\+Time}} (int y, int m, int d)
 \begin{DoxyCompactList}\small\item\em Construtor com dia, mês e ano. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_date_time_aa08f8e2e2abe0f5f63580454dce65753}{Date\+Time}} (int d, int m, int y, int h)
+\mbox{\hyperlink{class_date_time_a4d61150c76b8f5402f36ac668a4f1635}{Date\+Time}} (int y, int m, int d, int h)
 \begin{DoxyCompactList}\small\item\em Construtor com dia, mês, ano e horas. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_date_time_aed9a31d99f14363397f2105bfff24d45}{Date\+Time}} (int d, int m, int y, int h, int min)
+\mbox{\hyperlink{class_date_time_abe0202f947c3d2fb8c412f5f01268926}{Date\+Time}} (int y, int m, int d, int h, int min)
 \begin{DoxyCompactList}\small\item\em Construtor com dia, mês, ano, horas e minutos. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{class_date_time_aa409e6a9501f5f276bf8156d1b103aef}{Date\+Time}} (int d, int m, int y, int h, int min, int s, int ts)
+\mbox{\hyperlink{class_date_time_a6b44e7e1b9130a5e1d57efea21145bb6}{Date\+Time}} (int y, int m, int d, int h, int min, int s, int ts)
 \begin{DoxyCompactList}\small\item\em Construtor completo com todos os parâmetros. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_date_time_af8b0f83e25defa2c372ae52a1e7ba3a8}{is\+\_\+after}} (\mbox{\hyperlink{class_date_time}{Date\+Time}} dt)
 \begin{DoxyCompactList}\small\item\em Verifica se a data atual é posterior a outra data. \end{DoxyCompactList}\item 
@@ -110,11 +110,11 @@ std\+::ostream \& \mbox{\hyperlink{class_date_time_a349e8dda083ae7cbf8f1dc355799
 Classe para representar e manipular datas e horários. 
 
 \doxysubsection{Construtores e Destrutores}
-\Hypertarget{class_date_time_a3f047959b60ca93f2b9b633e888172e6}\index{DateTime@{DateTime}!DateTime@{DateTime}}
+\Hypertarget{class_date_time_a64a66de21d00a0a064a6facc08bd58a5}\index{DateTime@{DateTime}!DateTime@{DateTime}}
 \index{DateTime@{DateTime}!DateTime@{DateTime}}
 \doxysubsubsection{\texorpdfstring{DateTime()}{DateTime()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
-{\footnotesize\ttfamily \label{class_date_time_a3f047959b60ca93f2b9b633e888172e6} 
-Date\+Time\+::\+Date\+Time (\begin{DoxyParamCaption}\item[{int}]{d}{, }\item[{int}]{m}{, }\item[{int}]{y}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_date_time_a64a66de21d00a0a064a6facc08bd58a5} 
+Date\+Time\+::\+Date\+Time (\begin{DoxyParamCaption}\item[{int}]{y}{, }\item[{int}]{m}{, }\item[{int}]{d}{}\end{DoxyParamCaption})}
 
 
 
@@ -122,18 +122,18 @@ Construtor com dia, mês e ano.
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em d} & Dia. \\
+{\em y} & Ano. \\
 \hline
 {\em m} & Mês. \\
 \hline
-{\em y} & Ano. \\
+{\em d} & Dia. \\
 \hline
 \end{DoxyParams}
-\Hypertarget{class_date_time_aa08f8e2e2abe0f5f63580454dce65753}\index{DateTime@{DateTime}!DateTime@{DateTime}}
+\Hypertarget{class_date_time_a4d61150c76b8f5402f36ac668a4f1635}\index{DateTime@{DateTime}!DateTime@{DateTime}}
 \index{DateTime@{DateTime}!DateTime@{DateTime}}
 \doxysubsubsection{\texorpdfstring{DateTime()}{DateTime()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
-{\footnotesize\ttfamily \label{class_date_time_aa08f8e2e2abe0f5f63580454dce65753} 
-Date\+Time\+::\+Date\+Time (\begin{DoxyParamCaption}\item[{int}]{d}{, }\item[{int}]{m}{, }\item[{int}]{y}{, }\item[{int}]{h}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_date_time_a4d61150c76b8f5402f36ac668a4f1635} 
+Date\+Time\+::\+Date\+Time (\begin{DoxyParamCaption}\item[{int}]{y}{, }\item[{int}]{m}{, }\item[{int}]{d}{, }\item[{int}]{h}{}\end{DoxyParamCaption})}
 
 
 
@@ -141,20 +141,20 @@ Construtor com dia, mês, ano e horas.
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em d} & Dia. \\
+{\em y} & Ano. \\
 \hline
 {\em m} & Mês. \\
 \hline
-{\em y} & Ano. \\
+{\em d} & Dia. \\
 \hline
 {\em h} & Horas. \\
 \hline
 \end{DoxyParams}
-\Hypertarget{class_date_time_aed9a31d99f14363397f2105bfff24d45}\index{DateTime@{DateTime}!DateTime@{DateTime}}
+\Hypertarget{class_date_time_abe0202f947c3d2fb8c412f5f01268926}\index{DateTime@{DateTime}!DateTime@{DateTime}}
 \index{DateTime@{DateTime}!DateTime@{DateTime}}
 \doxysubsubsection{\texorpdfstring{DateTime()}{DateTime()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
-{\footnotesize\ttfamily \label{class_date_time_aed9a31d99f14363397f2105bfff24d45} 
-Date\+Time\+::\+Date\+Time (\begin{DoxyParamCaption}\item[{int}]{d}{, }\item[{int}]{m}{, }\item[{int}]{y}{, }\item[{int}]{h}{, }\item[{int}]{min}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_date_time_abe0202f947c3d2fb8c412f5f01268926} 
+Date\+Time\+::\+Date\+Time (\begin{DoxyParamCaption}\item[{int}]{y}{, }\item[{int}]{m}{, }\item[{int}]{d}{, }\item[{int}]{h}{, }\item[{int}]{min}{}\end{DoxyParamCaption})}
 
 
 
@@ -162,22 +162,22 @@ Construtor com dia, mês, ano, horas e minutos.
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em d} & Dia. \\
+{\em y} & Ano. \\
 \hline
 {\em m} & Mês. \\
 \hline
-{\em y} & Ano. \\
+{\em d} & Dia. \\
 \hline
 {\em h} & Horas. \\
 \hline
 {\em min} & Minutos. \\
 \hline
 \end{DoxyParams}
-\Hypertarget{class_date_time_aa409e6a9501f5f276bf8156d1b103aef}\index{DateTime@{DateTime}!DateTime@{DateTime}}
+\Hypertarget{class_date_time_a6b44e7e1b9130a5e1d57efea21145bb6}\index{DateTime@{DateTime}!DateTime@{DateTime}}
 \index{DateTime@{DateTime}!DateTime@{DateTime}}
 \doxysubsubsection{\texorpdfstring{DateTime()}{DateTime()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
-{\footnotesize\ttfamily \label{class_date_time_aa409e6a9501f5f276bf8156d1b103aef} 
-Date\+Time\+::\+Date\+Time (\begin{DoxyParamCaption}\item[{int}]{d}{, }\item[{int}]{m}{, }\item[{int}]{y}{, }\item[{int}]{h}{, }\item[{int}]{min}{, }\item[{int}]{s}{, }\item[{int}]{ts}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_date_time_a6b44e7e1b9130a5e1d57efea21145bb6} 
+Date\+Time\+::\+Date\+Time (\begin{DoxyParamCaption}\item[{int}]{y}{, }\item[{int}]{m}{, }\item[{int}]{d}{, }\item[{int}]{h}{, }\item[{int}]{min}{, }\item[{int}]{s}{, }\item[{int}]{ts}{}\end{DoxyParamCaption})}
 
 
 
@@ -185,11 +185,11 @@ Construtor completo com todos os parâmetros.
 
 
 \begin{DoxyParams}{Parâmetros}
-{\em d} & Dia. \\
+{\em y} & Ano. \\
 \hline
 {\em m} & Mês. \\
 \hline
-{\em y} & Ano. \\
+{\em d} & Dia. \\
 \hline
 {\em h} & Horas. \\
 \hline

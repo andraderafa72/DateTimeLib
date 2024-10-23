@@ -39,7 +39,7 @@ private:
      * @param min Minutos.
      * @param s Segundos.
      */
-    void validate_time(int d, int m, int y, int h, int min, int s);
+    void validate_time(int d, int m, int y, int h, int min, int s, int ts);
 
     /**
      * @brief Retorna o mês a partir do número de dias e ano.
@@ -82,42 +82,42 @@ public:
 
     /**
      * @brief Construtor com dia, mês e ano.
-     * @param d Dia.
-     * @param m Mês.
      * @param y Ano.
+     * @param m Mês.
+     * @param d Dia.
      */
-    DateTime(int d, int m, int y);
+    DateTime(int y, int m, int d);
 
     /**
      * @brief Construtor com dia, mês, ano e horas.
-     * @param d Dia.
-     * @param m Mês.
      * @param y Ano.
+     * @param m Mês.
+     * @param d Dia.
      * @param h Horas.
      */
-    DateTime(int d, int m, int y, int h);
+    DateTime(int y, int m, int d, int h);
 
     /**
      * @brief Construtor com dia, mês, ano, horas e minutos.
-     * @param d Dia.
-     * @param m Mês.
      * @param y Ano.
+     * @param m Mês.
+     * @param d Dia.
      * @param h Horas.
      * @param min Minutos.
      */
-    DateTime(int d, int m, int y, int h, int min);
+    DateTime(int y, int m, int d, int h, int min);
 
     /**
      * @brief Construtor completo com todos os parâmetros.
-     * @param d Dia.
-     * @param m Mês.
      * @param y Ano.
+     * @param m Mês.
+     * @param d Dia.
      * @param h Horas.
      * @param min Minutos.
      * @param s Segundos.
      * @param ts Timestamp.
      */
-    DateTime(int d, int m, int y, int h, int min, int s, int ts);
+    DateTime(int y, int m, int d, int h, int min, int s, int ts);
 
     /* COMPARISONS */
 
