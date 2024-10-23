@@ -1,16 +1,16 @@
 var searchData=
 [
   ['seconds_0',['seconds',['../class_date_time.html#a0b36196a591d08b2512b02f7058560ee',1,'DateTime']]],
-  ['subtractdays_1',['SubtractDays',['../class_date_time.html#aecd98d6ac79c166d806cd4cc317acc42',1,'DateTime']]],
-  ['subtracthours_2',['SubtractHours',['../class_date_time.html#abd6ab83b6a660ed518e43dc2784b6b39',1,'DateTime']]],
-  ['subtractminutes_3',['SubtractMinutes',['../class_date_time.html#a4cbde30313f26a72e09de5268b1282eb',1,'DateTime']]],
-  ['subtractmonths_4',['SubtractMonths',['../class_date_time.html#afb5451110ab0cb4ed63c741666a1d21e',1,'DateTime']]],
-  ['subtractseconds_5',['SubtractSeconds',['../class_date_time.html#a2569863cb7ebd2c2c798bd285cebbcc5',1,'DateTime']]],
-  ['subtractyears_6',['SubtractYears',['../class_date_time.html#abe5a9327e5054b7da262e78ec274b685',1,'DateTime']]],
-  ['sumdays_7',['SumDays',['../class_date_time.html#a892383e6a0a5a6bdfa30d21cca9a79b2',1,'DateTime']]],
-  ['sumhours_8',['SumHours',['../class_date_time.html#a41821eff4df5ecee604efeff1b987093',1,'DateTime']]],
-  ['summinutes_9',['SumMinutes',['../class_date_time.html#ab48809d4b3c97ba7942cb981a9225e19',1,'DateTime']]],
-  ['summonths_10',['SumMonths',['../class_date_time.html#a3a1dca6b1eaabbb598947e5b19378be5',1,'DateTime']]],
-  ['sumseconds_11',['SumSeconds',['../class_date_time.html#a107c94313d5992b4dbc548b017b65180',1,'DateTime']]],
-  ['sumyears_12',['SumYears',['../class_date_time.html#aa5c12be3016087678a0388ef3bea197a',1,'DateTime']]]
+  ['subtract_5fdays_1',['subtract_days',['../class_date_time.html#a00d05c01fd8b02ef72d754c98604aef1',1,'DateTime']]],
+  ['subtract_5fhours_2',['subtract_hours',['../class_date_time.html#abc706e11a41ed492a3fc9c9307997bfb',1,'DateTime']]],
+  ['subtract_5fminutes_3',['subtract_minutes',['../class_date_time.html#a8d4af3431d0cb25ed1b57b732cf3efdd',1,'DateTime']]],
+  ['subtract_5fmonths_4',['subtract_months',['../class_date_time.html#abf64cd5ca0c06cf72c71fda167a7ac0c',1,'DateTime']]],
+  ['subtract_5fseconds_5',['subtract_seconds',['../class_date_time.html#a5c8520c0720c722f3b46ecaad4148b82',1,'DateTime']]],
+  ['subtract_5fyears_6',['subtract_years',['../class_date_time.html#a4944b5944dfdd5e708c17f66517bb791',1,'DateTime']]],
+  ['sum_5fdays_7',['sum_days',['../class_date_time.html#a6b27d8291d2a5aa11f49a6da3f945a97',1,'DateTime']]],
+  ['sum_5fhours_8',['sum_hours',['../class_date_time.html#ad072e841eb48d7316f1b835e991e9548',1,'DateTime']]],
+  ['sum_5fminutes_9',['sum_minutes',['../class_date_time.html#a515cda2cdd422480507bfe42da91d3fe',1,'DateTime']]],
+  ['sum_5fmonths_10',['sum_months',['../class_date_time.html#a90bdbabfe63d7e7650b8cdfc8c6b276f',1,'DateTime']]],
+  ['sum_5fseconds_11',['sum_seconds',['../class_date_time.html#a4170f6721ab46824a64c60327a237b59',1,'DateTime']]],
+  ['sum_5fyears_12',['sum_years',['../class_date_time.html#af8d720e1af79ae92a1d51093a4ebe2d8',1,'DateTime']]]
 ];

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['isafter_0',['isAfter',['../class_date_time.html#a4335cc58f26c7acfe9cc05ffa9304473',1,'DateTime']]],
-  ['isbefore_1',['isBefore',['../class_date_time.html#a768e5e06de2e8717cd8151597ce34632',1,'DateTime']]],
-  ['isequal_2',['isEqual',['../class_date_time.html#aa5201d5fefb417c52e9dea3d6e4fd529',1,'DateTime']]]
+  ['is_5fafter_0',['is_after',['../class_date_time.html#af8b0f83e25defa2c372ae52a1e7ba3a8',1,'DateTime']]],
+  ['is_5fbefore_1',['is_before',['../class_date_time.html#af89358088a8ea8bd139f977e8d5f16ba',1,'DateTime']]],
+  ['is_5fequal_2',['is_equal',['../class_date_time.html#ab402abf90f530bf78cce4ff31cf66254',1,'DateTime']]]
 ];

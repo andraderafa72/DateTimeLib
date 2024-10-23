@@ -14,8 +14,6 @@ using namespace std;
 #include <iostream>
 #include <string>
 
-using namespace std;
-
 /**
  * @class DateTime
  * @brief Classe para representar e manipular datas e horários.
@@ -30,7 +28,7 @@ private:
      * @param dt Outro objeto DateTime para comparação.
      * @return Resultado da comparação como string.
      */
-    string CompareThisDate(DateTime dt);
+    string compare_this_date(DateTime dt);
 
     /**
      * @brief Valida os componentes da data e hora.
@@ -41,7 +39,7 @@ private:
      * @param min Minutos.
      * @param s Segundos.
      */
-    void ValidateTime(int d, int m, int y, int h, int min, int s);
+    void validate_time(int d, int m, int y, int h, int min, int s);
 
     /**
      * @brief Retorna o mês a partir do número de dias e ano.
@@ -49,7 +47,7 @@ private:
      * @param currentYear Ano atual.
      * @return Mês correspondente.
      */
-    int MonthFromDays(int days, int currentYear);
+    int month_from_days(int days, int currentYear);
 
     /**
      * @brief Retorna a data a partir do número de dias e ano.
@@ -57,14 +55,14 @@ private:
      * @param currentYear Ano atual.
      * @return Dia do mês correspondente.
      */
-    int GetDateByDays(int days, int currentYear);
+    int get_date_by_days(int days, int currentYear);
 
     /**
      * @brief Verifica se o ano é bissexto.
      * @param year Ano a ser verificado.
      * @return 1 se for bissexto, 0 caso contrário.
      */
-    int isLeapYear(int year) const;
+    int is_leap_year(int year) const;
 
 public:
     int day,       ///< Dia do mês.
@@ -128,21 +126,21 @@ public:
      * @param dt Outro objeto DateTime para comparação.
      * @return true se for posterior, false caso contrário.
      */
-    bool isAfter(DateTime dt);
+    bool is_after(DateTime dt);
 
     /**
      * @brief Verifica se a data atual é igual a outra data.
      * @param dt Outro objeto DateTime para comparação.
      * @return true se for igual, false caso contrário.
      */
-    bool isEqual(DateTime dt);
+    bool is_equal(DateTime dt);
 
     /**
      * @brief Verifica se a data atual é anterior a outra data.
      * @param dt Outro objeto DateTime para comparação.
      * @return true se for anterior, false caso contrário.
      */
-    bool isBefore(DateTime dt);
+    bool is_before(DateTime dt);
 
     /* CONVERSIONS */
 
@@ -150,25 +148,25 @@ public:
      * @brief Converte a data para string.
      * @return Representação em string da data.
      */
-    string ToString() const;
+    string to_string() const;
 
     /**
      * @brief Converte a data para o formato ISO.
      * @return Data no formato ISO como string.
      */
-    string ToISOString() const;
+    string to_ISO_string() const;
 
     /**
      * @brief Converte a data para UTC.
      * @return Objeto DateTime correspondente no UTC.
      */
-    DateTime toUTC();
+    DateTime to_UTC();
 
     /**
      * @brief Altera o timestamp da data.
      * @param ts Novo timestamp.
      */
-    void ChangeTimeStamp(int ts);
+    void change_time_stamp(int ts);
 
     /* DATE OPERATIONS */
 
@@ -176,37 +174,37 @@ public:
      * @brief Soma segundos à data.
      * @param s Segundos a serem somados.
      */
-    void SumSeconds(int s);
+    void sum_seconds(int s);
 
     /**
      * @brief Soma minutos à data.
      * @param min Minutos a serem somados.
      */
-    void SumMinutes(int min);
+    void sum_minutes(int min);
 
     /**
      * @brief Soma horas à data.
      * @param h Horas a serem somadas.
      */
-    void SumHours(int h);
+    void sum_hours(int h);
 
     /**
      * @brief Soma dias à data.
      * @param d Dias a serem somados.
      */
-    void SumDays(int d);
+    void sum_days(int d);
 
     /**
      * @brief Soma meses à data.
      * @param m Meses a serem somados.
      */
-    void SumMonths(int m);
+    void sum_months(int m);
 
     /**
      * @brief Soma anos à data.
      * @param y Anos a serem somados.
      */
-    void SumYears(int y);
+    void sum_years(int y);
 
     /* SUBTRACTIONS */
 
@@ -214,37 +212,37 @@ public:
      * @brief Subtrai segundos da data.
      * @param s Segundos a serem subtraídos.
      */
-    void SubtractSeconds(int s);
+    void subtract_seconds(int s);
 
     /**
      * @brief Subtrai minutos da data.
      * @param min Minutos a serem subtraídos.
      */
-    void SubtractMinutes(int min);
+    void subtract_minutes(int min);
 
     /**
      * @brief Subtrai horas da data.
      * @param h Horas a serem subtraídas.
      */
-    void SubtractHours(int h);
+    void subtract_hours(int h);
 
     /**
      * @brief Subtrai dias da data.
      * @param d Dias a serem subtraídos.
      */
-    void SubtractDays(int d);
+    void subtract_days(int d);
 
     /**
      * @brief Subtrai meses da data.
      * @param m Meses a serem subtraídos.
      */
-    void SubtractMonths(int m);
+    void subtract_months(int m);
 
     /**
      * @brief Subtrai anos da data.
      * @param y Anos a serem subtraídos.
      */
-    void SubtractYears(int y);
+    void subtract_years(int y);
 
     /* ANOTHER METHODS */
 
@@ -252,43 +250,43 @@ public:
      * @brief Obtém o ano completo da data.
      * @return Ano como inteiro.
      */
-    int GetFullYear() const;
+    int get_full_year() const;
 
     /**
      * @brief Obtém o mês da data.
      * @return Mês como inteiro.
      */
-    int GetMonth() const;
+    int get_month() const;
 
     /**
      * @brief Obtém o dia da data.
      * @return Dia como inteiro.
      */
-    int GetDate() const;
+    int get_date() const;
 
     /**
      * @brief Obtém as horas da data.
      * @return Horas como inteiro.
      */
-    int GetHours() const;
+    int get_hours() const;
 
     /**
      * @brief Obtém os minutos da data.
      * @return Minutos como inteiro.
      */
-    int GetMinutes() const;
+    int get_minutes() const;
 
     /**
      * @brief Obtém os segundos da data.
      * @return Segundos como inteiro.
      */
-    int GetSeconds() const;
+    int get_seconds() const;
 
     /**
      * @brief Obtém o dia do ano.
      * @return Dia do ano como inteiro.
      */
-    int GetDayOfTheYear() const;
+    int get_day_of_the_year() const;
 
     /**
      * @brief Sobrecarga do operador de inserção (<<) para imprimir a data.
@@ -297,7 +295,7 @@ public:
      * @return Stream de saída modificado.
      */
     friend std::ostream& operator<<(std::ostream& os, const DateTime& date) {
-        os << date.ToString();
+        os << date.to_string();
         return os;
     }
 };

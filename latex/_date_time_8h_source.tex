@@ -20,15 +20,15 @@
 \DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ days\_per\_month[2][13]\ =\ \{\{0,\ 31,\ 28,\ 31,\ 30,\ 31,\ 30,\ 31,\ 31,\ 30,\ 31,\ 30,\ 31\},}
 \DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{0,\ 31,\ 29,\ 31,\ 30,\ 31,\ 30,\ 31,\ 31,\ 30,\ 31,\ 30,\ 31\}\};}
 \DoxyCodeLine{00027\ }
-\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{string}\ CompareThisDate(\mbox{\hyperlink{class_date_time}{DateTime}}\ dt);}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{string}\ compare\_this\_date(\mbox{\hyperlink{class_date_time}{DateTime}}\ dt);}
 \DoxyCodeLine{00034\ }
-\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ ValidateTime(\textcolor{keywordtype}{int}\ d,\ \textcolor{keywordtype}{int}\ m,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ h,\ \textcolor{keywordtype}{int}\ min,\ \textcolor{keywordtype}{int}\ s);}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ validate\_time(\textcolor{keywordtype}{int}\ d,\ \textcolor{keywordtype}{int}\ m,\ \textcolor{keywordtype}{int}\ y,\ \textcolor{keywordtype}{int}\ h,\ \textcolor{keywordtype}{int}\ min,\ \textcolor{keywordtype}{int}\ s);}
 \DoxyCodeLine{00045\ }
-\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{int}\ MonthFromDays(\textcolor{keywordtype}{int}\ days,\ \textcolor{keywordtype}{int}\ currentYear);}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{int}\ month\_from\_days(\textcolor{keywordtype}{int}\ days,\ \textcolor{keywordtype}{int}\ currentYear);}
 \DoxyCodeLine{00053\ }
-\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{int}\ GetDateByDays(\textcolor{keywordtype}{int}\ days,\ \textcolor{keywordtype}{int}\ currentYear);}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{int}\ get\_date\_by\_days(\textcolor{keywordtype}{int}\ days,\ \textcolor{keywordtype}{int}\ currentYear);}
 \DoxyCodeLine{00061\ }
-\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{int}\ isLeapYear(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_date_time_a2321f5c6c78e5dda630c18e2cbae28dd}{year}})\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{int}\ is\_leap\_year(\textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_date_time_a2321f5c6c78e5dda630c18e2cbae28dd}{year}})\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00068\ }
 \DoxyCodeLine{00069\ \textcolor{keyword}{public}:}
 \DoxyCodeLine{00070\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_date_time_af608557420dd510badb778d0d2d4b1b9}{day}},\ \ \ \ \ \ \ }
@@ -53,68 +53,68 @@
 \DoxyCodeLine{00123\ }
 \DoxyCodeLine{00124\ \ \ \ \ \textcolor{comment}{/*\ COMPARISONS\ */}}
 \DoxyCodeLine{00125\ }
-\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_date_time_a4335cc58f26c7acfe9cc05ffa9304473}{isAfter}}(\mbox{\hyperlink{class_date_time}{DateTime}}\ dt);}
+\DoxyCodeLine{00131\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_date_time_af8b0f83e25defa2c372ae52a1e7ba3a8}{is\_after}}(\mbox{\hyperlink{class_date_time}{DateTime}}\ dt);}
 \DoxyCodeLine{00132\ }
-\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_date_time_aa5201d5fefb417c52e9dea3d6e4fd529}{isEqual}}(\mbox{\hyperlink{class_date_time}{DateTime}}\ dt);}
+\DoxyCodeLine{00138\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_date_time_ab402abf90f530bf78cce4ff31cf66254}{is\_equal}}(\mbox{\hyperlink{class_date_time}{DateTime}}\ dt);}
 \DoxyCodeLine{00139\ }
-\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_date_time_a768e5e06de2e8717cd8151597ce34632}{isBefore}}(\mbox{\hyperlink{class_date_time}{DateTime}}\ dt);}
+\DoxyCodeLine{00145\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_date_time_af89358088a8ea8bd139f977e8d5f16ba}{is\_before}}(\mbox{\hyperlink{class_date_time}{DateTime}}\ dt);}
 \DoxyCodeLine{00146\ }
 \DoxyCodeLine{00147\ \ \ \ \ \textcolor{comment}{/*\ CONVERSIONS\ */}}
 \DoxyCodeLine{00148\ }
-\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_date_time_a40053e072c619a03bfb99337fdf697b2}{ToString}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00153\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_date_time_a246ab4f7cd93e15135efb69363d97d83}{to\_string}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00154\ }
-\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_date_time_a6ada9b441d558b7c4ec40aaf7d4e02c9}{ToISOString}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00159\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_date_time_a7db08d62eb4b52c56854d97466954dc8}{to\_ISO\_string}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00160\ }
-\DoxyCodeLine{00165\ \ \ \ \ \mbox{\hyperlink{class_date_time}{DateTime}}\ \mbox{\hyperlink{class_date_time_a459e62657b6f591a5b74c43bc639deff}{toUTC}}();}
+\DoxyCodeLine{00165\ \ \ \ \ \mbox{\hyperlink{class_date_time}{DateTime}}\ \mbox{\hyperlink{class_date_time_a91de0911443cbfccdb6568b1393725c9}{to\_UTC}}();}
 \DoxyCodeLine{00166\ }
-\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_date_time_a90f87353a7be05d5c1a48890f785b386}{ChangeTimeStamp}}(\textcolor{keywordtype}{int}\ ts);}
+\DoxyCodeLine{00171\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_date_time_a8e01e0b400dd4c82a7364c81ce2a646d}{change\_time\_stamp}}(\textcolor{keywordtype}{int}\ ts);}
 \DoxyCodeLine{00172\ }
 \DoxyCodeLine{00173\ \ \ \ \ \textcolor{comment}{/*\ DATE\ OPERATIONS\ */}}
 \DoxyCodeLine{00174\ }
-\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_date_time_a107c94313d5992b4dbc548b017b65180}{SumSeconds}}(\textcolor{keywordtype}{int}\ s);}
+\DoxyCodeLine{00179\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_date_time_a4170f6721ab46824a64c60327a237b59}{sum\_seconds}}(\textcolor{keywordtype}{int}\ s);}
 \DoxyCodeLine{00180\ }
-\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_date_time_ab48809d4b3c97ba7942cb981a9225e19}{SumMinutes}}(\textcolor{keywordtype}{int}\ min);}
+\DoxyCodeLine{00185\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_date_time_a515cda2cdd422480507bfe42da91d3fe}{sum\_minutes}}(\textcolor{keywordtype}{int}\ min);}
 \DoxyCodeLine{00186\ }
-\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_date_time_a41821eff4df5ecee604efeff1b987093}{SumHours}}(\textcolor{keywordtype}{int}\ h);}
+\DoxyCodeLine{00191\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_date_time_ad072e841eb48d7316f1b835e991e9548}{sum\_hours}}(\textcolor{keywordtype}{int}\ h);}
 \DoxyCodeLine{00192\ }
-\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_date_time_a892383e6a0a5a6bdfa30d21cca9a79b2}{SumDays}}(\textcolor{keywordtype}{int}\ d);}
+\DoxyCodeLine{00197\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_date_time_a6b27d8291d2a5aa11f49a6da3f945a97}{sum\_days}}(\textcolor{keywordtype}{int}\ d);}
 \DoxyCodeLine{00198\ }
-\DoxyCodeLine{00203\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_date_time_a3a1dca6b1eaabbb598947e5b19378be5}{SumMonths}}(\textcolor{keywordtype}{int}\ m);}
+\DoxyCodeLine{00203\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_date_time_a90bdbabfe63d7e7650b8cdfc8c6b276f}{sum\_months}}(\textcolor{keywordtype}{int}\ m);}
 \DoxyCodeLine{00204\ }
-\DoxyCodeLine{00209\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_date_time_aa5c12be3016087678a0388ef3bea197a}{SumYears}}(\textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00209\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_date_time_af8d720e1af79ae92a1d51093a4ebe2d8}{sum\_years}}(\textcolor{keywordtype}{int}\ y);}
 \DoxyCodeLine{00210\ }
 \DoxyCodeLine{00211\ \ \ \ \ \textcolor{comment}{/*\ SUBTRACTIONS\ */}}
 \DoxyCodeLine{00212\ }
-\DoxyCodeLine{00217\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_date_time_a2569863cb7ebd2c2c798bd285cebbcc5}{SubtractSeconds}}(\textcolor{keywordtype}{int}\ s);}
+\DoxyCodeLine{00217\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_date_time_a5c8520c0720c722f3b46ecaad4148b82}{subtract\_seconds}}(\textcolor{keywordtype}{int}\ s);}
 \DoxyCodeLine{00218\ }
-\DoxyCodeLine{00223\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_date_time_a4cbde30313f26a72e09de5268b1282eb}{SubtractMinutes}}(\textcolor{keywordtype}{int}\ min);}
+\DoxyCodeLine{00223\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_date_time_a8d4af3431d0cb25ed1b57b732cf3efdd}{subtract\_minutes}}(\textcolor{keywordtype}{int}\ min);}
 \DoxyCodeLine{00224\ }
-\DoxyCodeLine{00229\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_date_time_abd6ab83b6a660ed518e43dc2784b6b39}{SubtractHours}}(\textcolor{keywordtype}{int}\ h);}
+\DoxyCodeLine{00229\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_date_time_abc706e11a41ed492a3fc9c9307997bfb}{subtract\_hours}}(\textcolor{keywordtype}{int}\ h);}
 \DoxyCodeLine{00230\ }
-\DoxyCodeLine{00235\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_date_time_aecd98d6ac79c166d806cd4cc317acc42}{SubtractDays}}(\textcolor{keywordtype}{int}\ d);}
+\DoxyCodeLine{00235\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_date_time_a00d05c01fd8b02ef72d754c98604aef1}{subtract\_days}}(\textcolor{keywordtype}{int}\ d);}
 \DoxyCodeLine{00236\ }
-\DoxyCodeLine{00241\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_date_time_afb5451110ab0cb4ed63c741666a1d21e}{SubtractMonths}}(\textcolor{keywordtype}{int}\ m);}
+\DoxyCodeLine{00241\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_date_time_abf64cd5ca0c06cf72c71fda167a7ac0c}{subtract\_months}}(\textcolor{keywordtype}{int}\ m);}
 \DoxyCodeLine{00242\ }
-\DoxyCodeLine{00247\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_date_time_abe5a9327e5054b7da262e78ec274b685}{SubtractYears}}(\textcolor{keywordtype}{int}\ y);}
+\DoxyCodeLine{00247\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_date_time_a4944b5944dfdd5e708c17f66517bb791}{subtract\_years}}(\textcolor{keywordtype}{int}\ y);}
 \DoxyCodeLine{00248\ }
 \DoxyCodeLine{00249\ \ \ \ \ \textcolor{comment}{/*\ ANOTHER\ METHODS\ */}}
 \DoxyCodeLine{00250\ }
-\DoxyCodeLine{00255\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_date_time_af7b66959f312ebf7b2240fa9998e9b11}{GetFullYear}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00255\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_date_time_aa582cc9cba73b45447b0d0c69ac14abc}{get\_full\_year}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00256\ }
-\DoxyCodeLine{00261\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_date_time_a5c592250b3cfea8314e39d6ceb55dda6}{GetMonth}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00261\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_date_time_aaaf4b154ed2d89f20d2e0e38eee2ce29}{get\_month}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00262\ }
-\DoxyCodeLine{00267\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_date_time_a382848cb6b421e55965bcc920e58fa7c}{GetDate}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00267\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_date_time_a7ca24a21386ed5d15488c7c4f47fcdcb}{get\_date}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00268\ }
-\DoxyCodeLine{00273\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_date_time_a41d291fce2b2fda02f5ceb5d977c5597}{GetHours}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00273\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_date_time_a6d4558bf8298927af2ccead8071a84b3}{get\_hours}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00274\ }
-\DoxyCodeLine{00279\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_date_time_afc2a7ff42954c3ac760d578c9dc43b4c}{GetMinutes}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00279\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_date_time_a1209fde67d35ef5d3732cdb7500afabb}{get\_minutes}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00280\ }
-\DoxyCodeLine{00285\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_date_time_a95d0158a08b084f468fd31108a43d1d7}{GetSeconds}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00285\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_date_time_ab241852794100741e334882a795f3dbd}{get\_seconds}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00286\ }
-\DoxyCodeLine{00291\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_date_time_af8f201eb3f584b9d345c30095732e642}{GetDayOfTheYear}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00291\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_date_time_a65d5613eb6892bfe3a537fb88525160a}{get\_day\_of\_the\_year}}()\ \textcolor{keyword}{const};}
 \DoxyCodeLine{00292\ }
 \DoxyCodeLine{00299\ \ \ \ \ \textcolor{keyword}{friend}\ std::ostream\&\ \mbox{\hyperlink{class_date_time_a349e8dda083ae7cbf8f1dc355799b9c2}{operator<<}}(std::ostream\&\ os,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{class_date_time}{DateTime}}\&\ date)\ \{}
-\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ os\ <<\ date.\mbox{\hyperlink{class_date_time_a40053e072c619a03bfb99337fdf697b2}{ToString}}();}
+\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ os\ <<\ date.\mbox{\hyperlink{class_date_time_a246ab4f7cd93e15135efb69363d97d83}{to\_string}}();}
 \DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ os;}
 \DoxyCodeLine{00302\ \ \ \ \ \}}
 \DoxyCodeLine{00303\ \};}
