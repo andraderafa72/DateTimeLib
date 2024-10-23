@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
   std::cout << "Date before sum: " << date << std::endl
     << "Summing 10 days...\n";
 
-  date.sum_days(10);
+  date.sum_days(15);
 
   std::cout << "Date after sum: " << date << std::endl
     << "---------------------------";

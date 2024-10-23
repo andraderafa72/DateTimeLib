@@ -14,18 +14,18 @@
 
 string DateTime::compare_this_date(DateTime dt)
 {
-    int thisComponents[] = {year, month, day, hours, minutes, seconds};
-    int dtComponents[] = {dt.year, dt.month, dt.day, dt.hours, dt.minutes, dt.seconds};
+  int thisComponents[] = {year, month, day, hours, minutes, seconds};
+  int dtComponents[] = {dt.year, dt.month, dt.day, dt.hours, dt.minutes, dt.seconds};
 
-    for (int i = 0; i < 6; i++)
-    {
-        if (thisComponents[i] > dtComponents[i])
-            return "bigger";
-        else if (thisComponents[i] < dtComponents[i])
-            return "smaller";
-    }
+  for (int i = 0; i < 6; i++)
+  {
+    if (thisComponents[i] > dtComponents[i])
+      return "bigger";
+    else if (thisComponents[i] < dtComponents[i])
+      return "smaller";
+  }
 
-    return "equal";
+  return "equal";
 }
 
 void DateTime::validate_time(int y, int m, int d, int h, int min, int s)
@@ -164,8 +164,21 @@ bool DateTime::is_equal(DateTime dt)
 
 #pragma region Date Operations
 
+void validate_operation_arg(std::string arg, int value)
+{
+  if (value == 0)
+    return;
+  else if (value < 0)
+  {
+    std::string msg = "DateTime Exception: Invalid '" + arg + "' argument. It must be greater than 0.";
+    throw std::invalid_argument(msg);
+  }
+}
+
 void DateTime::sum_seconds(int s)
 {
+  validate_operation_arg("seconds", s);
+
   int newS = seconds + s;
   while (newS > 60)
   {
@@ -178,6 +191,8 @@ void DateTime::sum_seconds(int s)
 
 void DateTime::sum_minutes(int min)
 {
+  validate_operation_arg("minutes", min);
+
   int newMin = minutes + min;
   while (newMin > 59)
   {
@@ -190,6 +205,8 @@ void DateTime::sum_minutes(int min)
 
 void DateTime::sum_hours(int h)
 {
+  validate_operation_arg("hours", h);
+
   int newH = hours + h;
   while (newH > 23)
   {
@@ -202,6 +219,8 @@ void DateTime::sum_hours(int h)
 
 void DateTime::sum_days(int d)
 {
+  validate_operation_arg("days", d);
+
   int newD = day + d;
 
   while (newD > days_per_month[is_leap_year(year)][month])
@@ -215,6 +234,8 @@ void DateTime::sum_days(int d)
 
 void DateTime::sum_months(int m)
 {
+  validate_operation_arg("months", m);
+
   int newM = month + m;
 
   while (newM > 12)
@@ -228,6 +249,8 @@ void DateTime::sum_months(int m)
 
 void DateTime::sum_years(int y)
 {
+  validate_operation_arg("years", y);
+
   int newY = year + y;
 
   if (newY < 1968 || newY > 2100)
@@ -238,6 +261,7 @@ void DateTime::sum_years(int y)
 
 void DateTime::subtract_seconds(int s)
 {
+  validate_operation_arg("seconds", s);
   int newS = seconds - s;
   while (newS < 0)
   {
@@ -250,6 +274,7 @@ void DateTime::subtract_seconds(int s)
 
 void DateTime::subtract_minutes(int min)
 {
+  validate_operation_arg("minutes", min);
   int newMin = minutes - min;
   while (newMin < 0)
   {
@@ -262,6 +287,7 @@ void DateTime::subtract_minutes(int min)
 
 void DateTime::subtract_hours(int h)
 {
+  validate_operation_arg("hours", h);
   int newH = hours - h;
   while (newH < 0)
   {
@@ -274,6 +300,7 @@ void DateTime::subtract_hours(int h)
 
 void DateTime::subtract_days(int d)
 {
+  validate_operation_arg("days", d);
   int newD = day - d;
 
   while (newD < 1)
@@ -287,6 +314,7 @@ void DateTime::subtract_days(int d)
 
 void DateTime::subtract_months(int m)
 {
+  validate_operation_arg("months", m);
   int newM = month - m;
 
   while (newM < 1)
@@ -300,6 +328,7 @@ void DateTime::subtract_months(int m)
 
 void DateTime::subtract_years(int y)
 {
+  validate_operation_arg("years", y);
   int newY = year - y;
 
   if (newY < 1968)
