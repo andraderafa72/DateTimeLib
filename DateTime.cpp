@@ -34,7 +34,7 @@ void DateTime::validate_time(int y, int m, int d, int h, int min, int s, int ts)
     throw std::invalid_argument("DateTime Exception: Invalid 'day' argument. It must be between 1 and 31");
   if (m > 12 || m < 1)
     throw std::invalid_argument("DateTime Exception: Invalid 'month' argument. It must be between 1 and 12");
-  if (ts >= -12 || ts <= 12)
+  if (ts < -12 || ts > 12)
     throw std::invalid_argument("DateTime Exception: Invalid 'time stamp' argument. It must be between -12 and 12");
   if (y < 1)
     throw std::invalid_argument("DateTime Exception: Invalid 'year' argument. It must be bigger than 1");
@@ -107,7 +107,7 @@ DateTime::DateTime(int y, int m, int d)
   hours = 0;
   minutes = 0;
   seconds = 0;
-  timestamp = 0;
+  timezone = 0;
 }
 DateTime::DateTime(int y, int m, int d, int h)
 {
@@ -118,7 +118,7 @@ DateTime::DateTime(int y, int m, int d, int h)
   hours = h;
   minutes = 0;
   seconds = 0;
-  timestamp = 0;
+  timezone = 0;
 };
 DateTime::DateTime(int y, int m, int d, int h, int min)
 {
@@ -129,7 +129,7 @@ DateTime::DateTime(int y, int m, int d, int h, int min)
   hours = h;
   minutes = min;
   seconds = 0;
-  timestamp = 0;
+  timezone = 0;
 };
 DateTime::DateTime(int y, int m, int d, int h, int min, int s, int ts)
 {
@@ -140,7 +140,7 @@ DateTime::DateTime(int y, int m, int d, int h, int min, int s, int ts)
   hours = h;
   minutes = min;
   seconds = s;
-  timestamp = ts;
+  timezone = ts;
 };
 
 #pragma endregion
@@ -394,45 +394,38 @@ string DateTime::to_string() const // dd/MM/yyyy hh:mm:ss
   return dayString + "/" + monthString + "/" + yearString + " " + hoursString + ":" + minutesString + ":" + secondsString;
 }
 
-string DateTime::to_ISO_string() const // dd/MM/yyyy hh:mm:ss
+string DateTime::to_ISO_string() const // yyyy-MM-ddThh:mm:ss.000Z
 {
-  string dayString = day < 10 ? "0" + std::to_string(day) : std::to_string(day);
-  string monthString = month < 10 ? "0" + std::to_string(month) : std::to_string(month);
-  string hoursString = hours < 10 ? "0" + std::to_string(hours) : std::to_string(hours);
-  string minutesString = minutes < 10 ? "0" + std::to_string(minutes) : std::to_string(minutes);
-  string secondsString = seconds < 10 ? "0" + std::to_string(seconds) : std::to_string(seconds);
-  string yearString;
+  DateTime tempDate(year, month, day, hours, minutes, seconds, timezone);
 
-  if (year < 10)
-  {
-    yearString = "000" + std::to_string(year);
-  }
-  else if (year < 100)
-  {
-    yearString = "00" + std::to_string(year);
-  }
-  else if (year < 1000)
-  {
-    yearString = "0" + std::to_string(year);
-  }
-  else
-  {
-    yearString = std::to_string(year);
-  }
+  if (timezone > 0)
+    tempDate.subtract_hours(timezone);
+  else if (timezone < 0)
+    tempDate.sum_hours(-timezone);
+  
 
-  return yearString + "-" + monthString + "-" + dayString + "T" + hoursString + ":" + minutesString + ":" + secondsString + ".000Z";
+  auto pad_zero = [](int value)
+  {
+    return (value < 10 ? "0" : "") + std::to_string(value);
+  };
+
+  string yearString = std::to_string(tempDate.year);
+  yearString.insert(0, 4 - yearString.length(), '0');
+
+  return yearString + "-" + pad_zero(tempDate.month) + "-" + pad_zero(tempDate.day) + "T" +
+         pad_zero(tempDate.hours) + ":" + pad_zero(tempDate.minutes) + ":" + pad_zero(tempDate.seconds) + ".000Z";
 }
 
 DateTime DateTime::to_UTC()
 {
-  if (timestamp != 0)
-    subtract_hours(timestamp > 0 ? timestamp : -timestamp);
+  if (timezone != 0)
+    subtract_hours(timezone > 0 ? timezone : -timezone);
 
   return DateTime(day, month, year, hours, minutes, seconds, 0);
 }
 
 void DateTime::change_time_stamp(int ts)
 {
-  subtract_hours(timestamp > 0 ? timestamp : -timestamp);
+  subtract_hours(timezone > 0 ? timezone : -timezone);
   sum_hours(ts);
 };

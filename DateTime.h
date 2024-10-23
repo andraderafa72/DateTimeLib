@@ -70,7 +70,7 @@ public:
         year,      ///< Ano.
         hours,     ///< Hora do dia.
         minutes,   ///< Minutos.
-        timestamp, ///< Timestamp (opcional).
+        timezone, ///< Timestamp (opcional).
         seconds;   ///< Segundos.
 
     /* CONSTRUCTORS */
@@ -163,8 +163,8 @@ public:
     DateTime to_UTC();
 
     /**
-     * @brief Altera o timestamp da data.
-     * @param ts Novo timestamp.
+     * @brief Altera o timezone da data.
+     * @param ts Novo timezone.
      */
     void change_time_stamp(int ts);
 
