@@ -33,3 +33,5 @@ string to_ISO_string() const;
 DateTime dt(23, 10, 2024, 14, 30, 45);
 string isoString = dt.to_ISO_string();  // "2024-10-23T14:30:45.000Z"
 ```
+
+<a href="index.md">Voltar ao início</a>
