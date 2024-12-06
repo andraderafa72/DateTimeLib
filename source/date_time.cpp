@@ -187,23 +187,12 @@ bool DateTime::is_equal(DateTime dt)
 
 #pragma region Date Operations
 
-void validate_operation_arg(std::string arg, int value)
-{
-  if (value == 0)
-    return;
-  else if (value < 0)
-  {
-    std::string msg = "DateTime Exception: Invalid '" + arg + "' argument. It must be greater than 0.";
-    throw std::invalid_argument(msg);
-  }
-}
-
 void DateTime::sum_seconds(int s)
 {
-  validate_operation_arg("seconds", s);
+  if(s < 0) return subtract_seconds(-s);
 
   int newS = seconds + s;
-  while (newS > 60)
+  while (newS > 59)
   {
     sum_minutes(1);
     newS -= 60;
@@ -214,7 +203,7 @@ void DateTime::sum_seconds(int s)
 
 void DateTime::sum_minutes(int min)
 {
-  validate_operation_arg("minutes", min);
+  if(min < 0) return subtract_minutes(-min);
 
   int newMin = minutes + min;
   while (newMin > 59)
@@ -228,7 +217,7 @@ void DateTime::sum_minutes(int min)
 
 void DateTime::sum_hours(int h)
 {
-  validate_operation_arg("hours", h);
+  if(h < 0) return subtract_hours(-h);
 
   int newH = hours + h;
   while (newH > 23)
@@ -242,7 +231,7 @@ void DateTime::sum_hours(int h)
 
 void DateTime::sum_days(int d)
 {
-  validate_operation_arg("days", d);
+  if(d < 0) return subtract_days(-d);
 
   int newD = day + d;
 
@@ -257,7 +246,7 @@ void DateTime::sum_days(int d)
 
 void DateTime::sum_months(int m)
 {
-  validate_operation_arg("months", m);
+  if(m < 0) return subtract_months(-m);
 
   int newM = month + m;
 
@@ -272,7 +261,7 @@ void DateTime::sum_months(int m)
 
 void DateTime::sum_years(int y)
 {
-  validate_operation_arg("years", y);
+  if(y < 0) return subtract_years(-y);
 
   int newY = year + y;
 
@@ -284,7 +273,8 @@ void DateTime::sum_years(int y)
 
 void DateTime::subtract_seconds(int s)
 {
-  validate_operation_arg("seconds", s);
+  if(s < 0) return sum_seconds(-s);
+
   int newS = seconds - s;
   while (newS < 0)
   {
@@ -297,7 +287,8 @@ void DateTime::subtract_seconds(int s)
 
 void DateTime::subtract_minutes(int min)
 {
-  validate_operation_arg("minutes", min);
+  if(min < 0) return sum_minutes(-min);
+
   int newMin = minutes - min;
   while (newMin < 0)
   {
@@ -310,7 +301,8 @@ void DateTime::subtract_minutes(int min)
 
 void DateTime::subtract_hours(int h)
 {
-  validate_operation_arg("hours", h);
+  if(h < 0) return sum_hours(-h);
+
   int newH = hours - h;
   while (newH < 0)
   {
@@ -323,7 +315,8 @@ void DateTime::subtract_hours(int h)
 
 void DateTime::subtract_days(int d)
 {
-  validate_operation_arg("days", d);
+  if(d < 0) return sum_days(-d);
+
   int newD = day - d;
 
   while (newD < 1)
@@ -338,7 +331,8 @@ void DateTime::subtract_days(int d)
 
 void DateTime::subtract_months(int m)
 {
-  validate_operation_arg("months", m);
+  if(m < 0) return sum_months(-m);
+
   int newM = month - m;
 
   while (newM < 1)
@@ -352,10 +346,11 @@ void DateTime::subtract_months(int m)
 
 void DateTime::subtract_years(int y)
 {
-  validate_operation_arg("years", y);
+  if(y < 0) return sum_years(-y);
+  
   int newY = year - y;
 
-  if (newY < 1968)
+  if (newY < 1)
     std::invalid_argument("DateTime Exception: Year to subtract out of range.");
 
   year = newY;

@@ -183,90 +183,125 @@ TEST(Comparisons, IsEqual) {
 
 TEST(Operations, SumYears) { 
   DateTime dt(2024, 12, 06, 9, 0, 0, -3);
+  
   dt.sum_years(1);
-
   EXPECT_EQ(dt.get_full_year(), 2025);
+
+   dt.sum_years(-1);
+  EXPECT_EQ(dt.get_full_year(), 2024);
+
 }
 
 TEST(Operations, SumMonths) { 
   DateTime dt(2024, 12, 06, 9, 0, 0, -3);
+  
   dt.sum_months(1);
-
   EXPECT_EQ(dt.get_full_year(), 2025);
   EXPECT_EQ(dt.get_month(), 1);
+
+  dt.sum_months(-1);
+  EXPECT_EQ(dt.get_full_year(), 2024);
+  EXPECT_EQ(dt.get_month(), 12);
 }
 
 TEST(Operations, SumDays) { 
   DateTime dt(2024, 12, 06, 9, 0, 0, -3);
   
   dt.sum_days(30);
-
   EXPECT_EQ(dt.get_full_year(), 2025);
   EXPECT_EQ(dt.get_month(), 1);
   EXPECT_EQ(dt.get_day(), 5);
+
+  dt.sum_days(-30);
+  EXPECT_EQ(dt.get_full_year(), 2024);
+  EXPECT_EQ(dt.get_month(), 12);
+  EXPECT_EQ(dt.get_day(), 6);
 }
 
 TEST(Operations, SumHours) { 
   DateTime dt(2024, 12, 06, 9, 0, 0, -3);
   
   dt.sum_hours(20);
-
   EXPECT_EQ(dt.get_day(), 7);
   EXPECT_EQ(dt.get_hours(), 5);
+
+  dt.sum_hours(-20);
+  EXPECT_EQ(dt.get_day(), 6);
+  EXPECT_EQ(dt.get_hours(), 9);
 }
 
 TEST(Operations, SumMinutes) { 
   DateTime dt(2024, 12, 06, 9, 0, 0, -3);
   
   dt.sum_minutes(70);
-
   EXPECT_EQ(dt.get_hours(), 10);
   EXPECT_EQ(dt.get_minutes(), 10);
+
+  dt.sum_minutes(-70);
+  EXPECT_EQ(dt.get_day(), 6);
+  EXPECT_EQ(dt.get_hours(), 9);
 }
 
 TEST(Operations, SumSeconds) { 
   DateTime dt(2024, 12, 06, 9, 0, 0, -3);
   
   dt.sum_seconds(150);
-
   EXPECT_EQ(dt.get_minutes(), 2);
   EXPECT_EQ(dt.get_seconds(), 30);
+
+  dt.sum_seconds(-150);
+  EXPECT_EQ(dt.get_minutes(), 0);
+  EXPECT_EQ(dt.get_seconds(), 0);
 }
 
 /// Subtract
 
 TEST(Operations, SubtractYears) { 
   DateTime dt(2024, 12, 06, 9, 0, 0, -3);
-  dt.subtract_years(1);
 
+  dt.subtract_years(1);
   EXPECT_EQ(dt.get_full_year(), 2023);
+
+  dt.subtract_years(-1);
+  EXPECT_EQ(dt.get_full_year(), 2024);
 }
 
 TEST(Operations, SubtractMonths) { 
   DateTime dt(2025, 1, 06, 9, 0, 0, -3);
+  
   dt.subtract_months(1);
-
   EXPECT_EQ(dt.get_full_year(), 2024);
   EXPECT_EQ(dt.get_month(), 12);
+
+  dt.subtract_months(-1);
+  EXPECT_EQ(dt.get_full_year(), 2025);
+  EXPECT_EQ(dt.get_month(), 1);
 }
 
 TEST(Operations, SubtractDays) { 
   DateTime dt(2025, 1, 06, 9, 0, 0, -3);
   
   dt.subtract_days(30);
-
   EXPECT_EQ(dt.get_full_year(), 2024);
   EXPECT_EQ(dt.get_month(), 12);
   EXPECT_EQ(dt.get_day(), 7);
+
+  dt.subtract_days(-30);
+  EXPECT_EQ(dt.get_full_year(), 2025);
+  EXPECT_EQ(dt.get_month(), 1);
+  EXPECT_EQ(dt.get_day(), 6);
 }
 
 TEST(Operations, SubtractHours) { 
   DateTime dt(2024, 12, 06, 9, 0, 0, -3);
   
   dt.subtract_hours(20);
-
   EXPECT_EQ(dt.get_day(), 5);
   EXPECT_EQ(dt.get_hours(), 13);
+  
+  dt.subtract_hours(-20);
+  EXPECT_EQ(dt.get_day(), 6);
+  EXPECT_EQ(dt.get_hours(), 9);
 }
 
 TEST(Operations, SubtractMinutes) { 
@@ -282,9 +317,12 @@ TEST(Operations, SubtractSeconds) {
   DateTime dt(2024, 12, 06, 9, 0, 0, -3);
   
   dt.subtract_seconds(150);
-  
   EXPECT_EQ(dt.get_minutes(), 57);
   EXPECT_EQ(dt.get_seconds(), 30);
+
+  dt.subtract_seconds(-150);
+  EXPECT_EQ(dt.get_minutes(), 0);
+  EXPECT_EQ(dt.get_seconds(), 0);
 }
 
 #pragma endregion

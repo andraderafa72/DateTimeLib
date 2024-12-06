@@ -183,37 +183,37 @@ public:
 
     /**
      * @brief Soma segundos à data.
-     * @param seconds Segundos a serem somados (s > 0).
+     * @param seconds Segundos a serem somados.
      */
     void sum_seconds(int seconds);
 
     /**
      * @brief Soma minutos à data.
-     * @param minutes Minutos a serem somados (min > 0).
+     * @param minutes Minutos a serem somados.
      */
     void sum_minutes(int minutes);
 
     /**
      * @brief Soma horas à data.
-     * @param hours Horas a serem somadas (h > 0).
+     * @param hours Horas a serem somadas.
      */
     void sum_hours(int hours);
 
     /**
      * @brief Soma dias à data.
-     * @param days Dias a serem somados (d > 0).
+     * @param days Dias a serem somados.
      */
     void sum_days(int days);
 
     /**
      * @brief Soma meses à data.
-     * @param months Meses a serem somados (m > 0).
+     * @param months Meses a serem somados.
      */
     void sum_months(int months);
 
     /**
      * @brief Soma anos à data.
-     * @param years Anos a serem somados (y > 0).
+     * @param years Anos a serem somados.
      */ 
     void sum_years(int years);
 
@@ -221,37 +221,37 @@ public:
 
     /**
      * @brief Subtrai segundos da data.
-     * @param seconds Segundos a serem subtraídos (s > 0).
+     * @param seconds Segundos a serem subtraídos.
      */
     void subtract_seconds(int seconds);
 
     /**
      * @brief Subtrai minutos da data.
-     * @param minutes Minutos a serem subtraídos (min > 0).
+     * @param minutes Minutos a serem subtraídos.
      */
     void subtract_minutes(int minutes);
 
     /**
      * @brief Subtrai horas da data.
-     * @param hours Horas a serem subtraídas (h > 0).
+     * @param hours Horas a serem subtraídas.
      */
     void subtract_hours(int hours);
 
     /**
      * @brief Subtrai dias da data.
-     * @param days Dias a serem subtraídos (d > 0).
+     * @param days Dias a serem subtraídos.
      */
     void subtract_days(int days);
 
     /**
      * @brief Subtrai meses da data.
-     * @param months Meses a serem subtraídos (m > 0).
+     * @param months Meses a serem subtraídos.
      */
     void subtract_months(int months);
 
     /**
      * @brief Subtrai anos da data.
-     * @param years Anos a serem subtraídos (y > 0).
+     * @param years Anos a serem subtraídos.
      */
     void subtract_years(int years);
 
