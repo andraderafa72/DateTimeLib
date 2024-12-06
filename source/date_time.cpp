@@ -6,7 +6,7 @@
 #include <iostream>
 #include <string>
 
-#include "./DateTime.h"
+#include "./date_time.h"
 
 // using namespace std;
 
@@ -97,7 +97,16 @@ int DateTime::get_date_by_days(int days, int currentYear)
 
 #pragma region Constructors
 
-DateTime::DateTime() {};
+DateTime::DateTime() {
+  year = 0;
+  month = 0;
+  day = 0;
+  hours = 0;
+  minutes= 0;
+  seconds = 0;
+  timezone = 0;
+};
+
 DateTime::DateTime(int y, int m, int d)
 {
   validate_time(y, m, d, 0, 0, 0, 0);
@@ -319,7 +328,8 @@ void DateTime::subtract_days(int d)
 
   while (newD < 1)
   {
-    newD += days_per_month[is_leap_year(year)][month - 1];
+    int month_index = month - 1 == 0 ? 12 : month - 1;
+    newD += days_per_month[is_leap_year(year)][month_index];
     subtract_months(1);
   }
 
@@ -353,14 +363,26 @@ void DateTime::subtract_years(int y)
 
 #pragma endregion
 
+#pragma region Setters
+
+void DateTime::set_full_year(int y) { year = y; }
+void DateTime::set_month(int m) { month = m; }
+void DateTime::set_day(int d) { day = d; }
+void DateTime::set_hours(int h) { hours = h; }
+void DateTime::set_minutes(int min) { minutes = min; }
+void DateTime::set_seconds(int s) { seconds = s; }
+
+#pragma endregion
+
 #pragma region Acessors
 
 int DateTime::get_full_year() const { return year; }
 int DateTime::get_month() const { return month; }
-int DateTime::get_date() const { return day; }
+int DateTime::get_day() const { return day; }
 int DateTime::get_hours() const { return hours; }
-int DateTime::get_minutes() const { return month; }
+int DateTime::get_minutes() const { return minutes; }
 int DateTime::get_seconds() const { return seconds; }
+int DateTime::get_timezone() const { return timezone; }
 int DateTime::get_day_of_the_year() const
 {
   int isLeap = is_leap_year(year);
@@ -393,7 +415,7 @@ std::string DateTime::to_string() const // dd/MM/yyyy hh:mm:ss
 
 std::string DateTime::to_ISO_string() const // yyyy-MM-ddThh:mm:ss.000Z
 {
-  DateTime tempDate = DateTime(year, month, day, hours, minutes, seconds, timezone).to_UTC();
+  DateTime tempDate = to_UTC();
 
   std::string yearString = std::to_string(tempDate.year);
   yearString.insert(0, 4 - yearString.length(), '0');
@@ -421,4 +443,6 @@ void DateTime::change_timezone(int newTimezone)
     sum_hours(newTimezone);
   else if(newTimezone < 0)
     subtract_hours(-newTimezone);
+
+  timezone = newTimezone;
 };

@@ -273,7 +273,7 @@ public:
      * @brief Obtém o dia da data.
      * @return Dia como inteiro.
      */
-    int get_date() const;
+    int get_day() const;
 
     /**
      * @brief Obtém as horas da data.
@@ -292,6 +292,49 @@ public:
      * @return Segundos como inteiro.
      */
     int get_seconds() const;
+
+    /**
+     * @brief Obtém o timezone da data.
+     * @return Timezone como inteiro entre -12 e 12.
+     */
+    int get_timezone() const;
+
+    /**
+     * @brief Obtém o ano completo da data.
+     * @param y ANo
+     */
+    void set_full_year(int y);
+
+    /**
+     * @brief Obtém o mês da data.
+     * @param m Mês.
+     */
+    void set_month(int m);
+
+    /**
+     * @brief Define o dia da data.
+     * @param d Dia
+     */
+    void set_day(int d);
+
+    /**
+     * @brief Obtém as horas da data.
+     * @param h Horas
+     */
+    void set_hours(int h);
+
+    /**
+     * @brief Obtém os minutos da data.
+     * @param min Minutos
+     */
+    void set_minutes(int min);
+
+    /**
+     * @brief Obtém os segundos da data.
+     * @param s Segundos
+     */
+    void set_seconds(int s);
+
 
     /**
      * @brief Obtém o dia do ano.
