@@ -1,3 +1,4 @@
+#include <chrono>
 #include <gtest/gtest.h>
 #include <iostream>
 #include "date_time.h"
@@ -326,3 +327,27 @@ TEST(Operations, SubtractSeconds) {
 }
 
 #pragma endregion
+
+TEST(ExecutionTime, SumBillionMinutes){
+  auto start = std::chrono::high_resolution_clock::now();
+
+  DateTime dt;
+  dt.sum_seconds(1000000000);
+
+  auto end = std::chrono::high_resolution_clock::now();
+  auto duration = std::chrono::duration_cast<std::chrono::seconds>(end - start);
+
+  EXPECT_LT(duration.count(), 1);
+}
+
+TEST(ExecutionTime, SubBillionMinutes){
+  auto start = std::chrono::high_resolution_clock::now();
+
+  DateTime dt(2024, 12, 6);
+  dt.subtract_minutes(1000000000);
+
+  auto end = std::chrono::high_resolution_clock::now();
+  auto duration = std::chrono::duration_cast<std::chrono::seconds>(end - start);
+
+  EXPECT_LT(duration.count(), 1);
+}

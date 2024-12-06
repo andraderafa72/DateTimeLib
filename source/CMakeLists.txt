@@ -15,7 +15,7 @@ set( CMAKE_CXX_FLAGS  "${CMAKE_CXX_FLAGS} ${GCC_COMPILE_FLAGS} ${PREPROCESSING_F
 
 #Include dir
 # include_directories( lib )
-add_library(date_time_lib
+add_library(date_time
     "date_time.cpp" 
     "main.cpp"
 )
